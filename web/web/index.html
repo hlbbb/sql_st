@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#F2F4F7">
+  <title>SQL刷题</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== 首页 ===== -->
+  <div id="page-home" class="page active">
+    <div id="home-content"></div>
+  </div>
+
+  <!-- ===== 题库列表 ===== -->
+  <div id="page-list" class="page">
+    <div class="search-bar">
+      <div class="search-wrap">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="5"/><path d="M15 15l4 4"/></svg>
+        <input class="search-input" placeholder="搜索题目..." oninput="onSearch(this.value)">
+      </div>
+    </div>
+    <div class="filter-row">
+      <span class="diff-chip active" data-val="" onclick="setDifficulty('')">全部</span>
+      <span class="diff-chip" data-val="easy" onclick="setDifficulty('easy')">简单</span>
+      <span class="diff-chip" data-val="medium" onclick="setDifficulty('medium')">中等</span>
+      <span class="diff-chip" data-val="hard" onclick="setDifficulty('hard')">困难</span>
+    </div>
+    <div class="filter-row cat-filter-row">
+      <span class="cat-chip active" data-val="" onclick="setCategory('')">全部</span>
+      <span class="cat-chip" data-val="basic" onclick="setCategory('basic')">基础查询</span>
+      <span class="cat-chip" data-val="condition_date" onclick="setCategory('condition_date')">条件与日期</span>
+      <span class="cat-chip" data-val="aggregate" onclick="setCategory('aggregate')">聚合函数</span>
+      <span class="cat-chip" data-val="string_cast" onclick="setCategory('string_cast')">字符串与转换</span>
+      <span class="cat-chip" data-val="result_set" onclick="setCategory('result_set')">结果集操作</span>
+      <span class="cat-chip" data-val="join" onclick="setCategory('join')">多表连接</span>
+      <span class="cat-chip" data-val="subquery" onclick="setCategory('subquery')">子查询</span>
+      <span class="cat-chip" data-val="window" onclick="setCategory('window')">窗口函数</span>
+      <span class="cat-chip" data-val="dml" onclick="setCategory('dml')">数据操作</span>
+      <span class="cat-chip" data-val="analytics" onclick="setCategory('analytics')">数据分析实战</span>
+    </div>
+    <div id="question-list"></div>
+  </div>
+
+  <!-- ===== 答题页 ===== -->
+  <div id="page-practice" class="page">
+    <div class="nav-bar">
+      <span class="nav-back" onclick="showPage('home')">
+        <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+      </span>
+      <span class="nav-title">答题</span>
+    </div>
+    <div id="practice-content"></div>
+  </div>
+
+  <!-- ===== 测评/晋阶页（共用） ===== -->
+  <div id="page-assessment" class="page">
+    <div id="assessment-content"></div>
+  </div>
+
+  <!-- ===== 错题本 ===== -->
+  <div id="page-wrong" class="page">
+    <div class="section-title">错题本 (<span id="wrong-count">0</span>)</div>
+    <div id="wrong-list"></div>
+  </div>
+
+  <!-- ===== 个人中心 ===== -->
+  <div id="page-profile" class="page">
+    <div class="card user-card">
+      <div class="user-avatar">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <div>
+        <div class="user-name">SQL学习者</div>
+        <div class="user-desc" id="profile-level-desc">坚持刷题，提升SQL能力</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-title">学习统计</div>
+      <div class="stats-grid">
+        <div class="stat-item"><span class="stat-num text-primary" id="p-total">0</span><span class="stat-label">总答题</span></div>
+        <div class="stat-item"><span class="stat-num text-success" id="p-correct">0</span><span class="stat-label">答对</span></div>
+        <div class="stat-item"><span class="stat-num text-accent" id="p-accuracy">0%</span><span class="stat-label">正确率</span></div>
+        <div class="stat-item"><span class="stat-num text-danger" id="p-wrong">0</span><span class="stat-label">错题</span></div>
+        <div class="stat-item"><span class="stat-num text-primary" id="p-today">0</span><span class="stat-label">今日</span></div>
+      </div>
+    </div>
+    <div class="card" style="padding:4px 16px">
+      <div class="menu-item" onclick="showPage('wrong')">
+        <span class="menu-text">错题本</span><span class="menu-arrow">›</span>
+      </div>
+      <div class="menu-item" onclick="showRankPage()">
+        <span class="menu-text">学习报告</span><span class="menu-arrow">›</span>
+      </div>
+      <div class="menu-item" onclick="showHelpPage()">
+        <span class="menu-text">使用说明</span><span class="menu-arrow">›</span>
+      </div>
+      <div class="menu-item" onclick="if(confirm('确定清除所有数据？')){localStorage.clear();location.reload()}">
+        <span class="menu-text" style="color:var(--danger)">清除数据</span><span class="menu-arrow">›</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 底部导航 ===== -->
+  <div class="tab-bar">
+    <div class="tab-item active" data-page="home">
+      <span class="tab-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+      首页
+    </div>
+    <div class="tab-item" data-page="list">
+      <span class="tab-icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
+      题库
+    </div>
+    <div class="tab-item" data-page="wrong">
+      <span class="tab-icon"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></span>
+      错题
+    </div>
+    <div class="tab-item" data-page="profile">
+      <span class="tab-icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+      我的
+    </div>
+  </div>
+
+  <!-- 晋阶升级动画遮罩 -->
+  <div id="level-up-overlay" class="level-up-overlay" style="display:none">
+    <div class="level-up-content">
+      <div class="level-up-icon" id="level-up-icon"></div>
+      <div class="level-up-title" id="level-up-title">恭喜升级！</div>
+      <div class="level-up-name" id="level-up-name"></div>
+      <div class="level-up-btn" onclick="document.getElementById('level-up-overlay').style.display='none'">太棒了</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="questions.js"></script>
+  <script src="smart-recommend.js"></script>
+  <script src="assessment.js"></script>
+  <script src="promotion.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
