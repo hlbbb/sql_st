@@ -44,22 +44,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "WHERE age GREATER THAN 20",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "WHERE age > 20",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "WHERE age => 20",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "WHERE age >> 20",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "WHERE age GREATER THAN 20",
+        "text": "WHERE age >> 20",
         "correct": false
       }
     ],
@@ -77,22 +77,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT DISTINCT department FROM employees",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT UNIQUE department FROM employees",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT DIFFERENT department FROM employees",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT department DISTINCT FROM employees",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT DISTINCT department FROM employees",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT UNIQUE department FROM employees",
         "correct": false
       }
     ],
@@ -110,23 +110,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "ORDER BY salary DESC",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "ORDER BY salary ASC",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "SORT BY salary DESC",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "ORDER BY salary DOWN",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "ORDER BY salary DESC",
+        "correct": true
       }
     ],
     "explanation": "ORDER BY ... DESC 表示降序排列（从高到低）。ASC是升序，SORT BY不是标准SQL关键字，DOWN不是排序方向关键字。",
@@ -176,22 +176,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "WHERE name = '张*'",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "WHERE name LIKE '张%'",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "WHERE name LIKE '%张'",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "WHERE name LIKE '%张%'",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "WHERE name = '张*'",
+        "text": "WHERE name LIKE '%张%'",
         "correct": false
       }
     ],
@@ -209,22 +209,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "WHERE department IN ('销售部','市场部','技术部')",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "WHERE department = '销售部' OR '市场部' OR '技术部'",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "WHERE department IN (销售部,市场部,技术部)",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "WHERE department BETWEEN '销售部' AND '技术部'",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "WHERE department IN ('销售部','市场部','技术部')",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "WHERE department = '销售部' OR '市场部' OR '技术部'",
         "correct": false
       }
     ],
@@ -242,23 +242,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "WHERE age BETWEEN 20 AND 30",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "WHERE age IN (20,30)",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "WHERE age FROM 20 TO 30",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "WHERE 20 <= age <= 30",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "WHERE age BETWEEN 20 AND 30",
+        "correct": true
       }
     ],
     "explanation": "BETWEEN ... AND ... 是标准范围查询语法。IN只匹配列表中的值不含区间，FROM...TO不是SQL语法，连续比较运算符在SQL中无效。",
@@ -308,22 +308,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "XOR",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "AND",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "OR",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "NOT",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "XOR",
+        "text": "NOT",
         "correct": false
       }
     ],
@@ -342,22 +342,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "有3条记录的price大于100",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "所有记录的price都大于100",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "有2条记录的price大于100",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "price列有3个NULL值",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "有3条记录的price大于100",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "所有记录的price都大于100",
         "correct": false
       }
     ],
@@ -376,23 +376,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "工资最高的3名员工",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "工资最低的3名员工",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "所有员工按工资降序排列",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "前3条记录",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "工资最高的3名员工",
+        "correct": true
       }
     ],
     "explanation": "ORDER BY salary DESC 按工资降序排列，LIMIT 3限制返回3条，即工资最高的3人。不是最低（那是ASC），不是所有员工（缺少LIMIT），不是按原始顺序的前3条。",
@@ -443,22 +443,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "IF",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "WHERE",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "HAVING",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "WHEN",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "IF",
+        "text": "WHEN",
         "correct": false
       }
     ],
@@ -476,22 +476,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "ASC",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "DESC",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "UP",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "ASCENDING",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "ASC",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "DESC",
         "correct": false
       }
     ],
@@ -509,23 +509,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "LIKE '_明%'",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "LIKE '%明%'",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "LIKE '明%'",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "LIKE '%明'",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "LIKE '_明%'",
+        "correct": true
       }
     ],
     "explanation": "_匹配单个字符，%匹配任意字符序列。'_明%'表示第一个字符任意、第二个是'明'。'%明%'是包含'明'，'明%'是以'明'开头，'%明'是以'明'结尾。",
@@ -576,22 +576,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "WHERE 条件写反了",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "ORDER BY 应在 WHERE 之后",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "DESC 写法错误",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "salary 列不存在",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "WHERE 条件写反了",
+        "text": "salary 列不存在",
         "correct": false
       }
     ],
@@ -609,22 +609,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "跳过指定数量的行",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "限制返回行数",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "排序结果集",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "去重结果集",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "跳过指定数量的行",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "限制返回行数",
         "correct": false
       }
     ],
@@ -642,23 +642,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "对条件取反",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "组合多个条件",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "删除数据",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "排除NULL值",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "对条件取反",
+        "correct": true
       }
     ],
     "explanation": "NOT是对逻辑条件取反的运算符。组合条件是AND/OR的功能，删除数据是DELETE，排除NULL用IS NOT NULL。",
@@ -710,22 +710,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "START",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "OFFSET",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "SKIP",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "AFTER",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "START",
+        "text": "AFTER",
         "correct": false
       }
     ],
@@ -744,22 +744,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "仅name和age两列",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "所有列",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "仅name列",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "除name和age外的所有列",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "仅name和age两列",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "所有列",
         "correct": false
       }
     ],
@@ -777,23 +777,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "年龄大于20或工资大于5000，满足其一即可",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "年龄大于20且工资大于5000",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "年龄不大于20且工资不大于5000",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "年龄等于20或工资等于5000",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "年龄大于20或工资大于5000，满足其一即可",
+        "correct": true
       }
     ],
     "explanation": "OR表示两个条件满足其一即可。AND才是同时满足，NOT...AND...表示取反，OR是比较运算而非等于判断。",
@@ -844,22 +844,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "包含20但不包含10",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "包含10和20",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "包含10但不包含20",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "不包含10和20",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "包含20但不包含10",
+        "text": "不包含10和20",
         "correct": false
       }
     ],
@@ -877,22 +877,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "不出现，因为'C'不在列表中",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "出现，IN匹配任意值",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "取决于其他条件",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "出现，因为C接近B",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "不出现，因为'C'不在列表中",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "出现，IN匹配任意值",
         "correct": false
       }
     ],
@@ -911,23 +911,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "判断值不为空",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "判断值为空",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "判断值不存在",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "删除空值",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "判断值不为空",
+        "correct": true
       }
     ],
     "explanation": "IS NOT NULL判断字段值不为空（有值）。IS NULL判断为空，'不存在'和'删除'不是其功能。",
@@ -980,22 +980,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "匹配字母字符",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "匹配单个字符",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "匹配零个或多个字符",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "匹配数字字符",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "匹配字母字符",
+        "text": "匹配数字字符",
         "correct": false
       }
     ],
@@ -1015,22 +1015,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "耳机",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "键盘, 耳机",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "显示器",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "无结果",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "耳机",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "键盘, 耳机",
         "correct": false
       }
     ],
@@ -1049,23 +1049,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "张三, 王五, 李四",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "张三, 李四, 王五",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "王五, 张三, 李四",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "李四, 张三, 王五",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "张三, 王五, 李四",
+        "correct": true
       }
     ],
     "explanation": "先按score降序：90(张三,王五), 85(李四)。同分90的再按class升序：A班张三在前，B班王五在后。最终：张三,王五,李四。",
@@ -1117,22 +1117,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "EXCEPT BETWEEN",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "NOT BETWEEN",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "NOT IN",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "NOT LIKE",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "EXCEPT BETWEEN",
+        "text": "NOT LIKE",
         "correct": false
       }
     ],
@@ -1151,22 +1151,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "语法正确但可简化为IN写法",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "OR不能连用三次",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "status列不存在",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "WHERE子句缺少AND",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "语法正确但可简化为IN写法",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "OR不能连用三次",
         "correct": false
       }
     ],
@@ -1185,23 +1185,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "没有问题，语法正确",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "LIKE不能和AND一起使用",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "_通配符匹配多个字符",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "age > 25语法错误",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "没有问题，语法正确",
+        "correct": true
       }
     ],
     "explanation": "LIKE可以与AND组合使用，_只匹配单个字符（不是多个），age>25语法正确。该SQL语法无误。",
@@ -1253,22 +1253,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "price小于等于100",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "price不等于100",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "price小于100",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "price大于100",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "price小于等于100",
+        "text": "price大于100",
         "correct": false
       }
     ],
@@ -1287,22 +1287,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "先按score降序，同分时按name升序",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "先按name升序，再按score降序",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "两列同时降序",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "两列同时升序",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "先按score降序，同分时按name升序",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "先按name升序，再按score降序",
         "correct": false
       }
     ],
@@ -1321,23 +1321,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "名称中不包含'手机'的产品",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "名称以'手机'开头的产品",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "名称以'手机'结尾的产品",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "所有产品",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "名称中不包含'手机'的产品",
+        "correct": true
       }
     ],
     "explanation": "NOT LIKE '%手机%'排除包含'手机'的记录，返回不包含的产品。不是以手机开头或结尾，也不是所有产品（排除了含手机的）。",
@@ -1388,22 +1388,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "IF",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "WHERE",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "HAVING",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "WHEN",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "IF",
+        "text": "WHEN",
         "correct": false
       }
     ],
@@ -1422,22 +1422,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "语法正确，返回中国不同城市列表",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "DISTINCT只能用于一列",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "WHERE与DISTINCT冲突",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "country列不存在",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "语法正确，返回中国不同城市列表",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "DISTINCT只能用于一列",
         "correct": false
       }
     ],
@@ -1456,23 +1456,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "AS",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "ALIAS",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "NAME",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "RENAME",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "AS",
+        "correct": true
       }
     ],
     "explanation": "AS是标准SQL别名关键字。ALIAS、NAME、RENAME不是SQL的别名关键字。",
@@ -1524,22 +1524,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "不显示",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "最前面",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "最后面",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "中间位置",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "不显示",
+        "text": "中间位置",
         "correct": false
       }
     ],
@@ -1558,22 +1558,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "OFFSET不能为负数",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "LIMIT不能为10",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "缺少ORDER BY",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "OFFSET应在LIMIT之前",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "OFFSET不能为负数",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "LIMIT不能为10",
         "correct": false
       }
     ],
@@ -1592,23 +1592,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "先AND后OR，等价于 (a>1 AND b>2) OR c>3",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "先OR后AND，等价于 a>1 AND (b>2 OR c>3)",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "从左到右无优先级",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "AND和OR优先级相同",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "先AND后OR，等价于 (a>1 AND b>2) OR c>3",
+        "correct": true
       }
     ],
     "explanation": "AND优先级高于OR，所以先计算AND部分。不是先OR，不是从左到右无优先级，AND和OR优先级不同。",
@@ -1660,22 +1660,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "name列不能是中文",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "语法正确，'张%'和'张%%'等价",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "%%是语法错误",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "LIKE只能用单个%",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "name列不能是中文",
+        "text": "LIKE只能用单个%",
         "correct": false
       }
     ],
@@ -1695,22 +1695,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "通常不可以，WHERE在SELECT之前执行",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "可以，别名全局可用",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "只在MySQL中可以",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "所有数据库都可以",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "通常不可以，WHERE在SELECT之前执行",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "可以，别名全局可用",
         "correct": false
       }
     ],
@@ -1730,23 +1730,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "不出现在结果中，NULL与任何比较都为UNKNOWN",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "出现在结果中",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "取决于数据库",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "NULL等于0，所以不出现",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "不出现在结果中，NULL与任何比较都为UNKNOWN",
+        "correct": true
       }
     ],
     "explanation": "NULL与任何值的比较结果都是UNKNOWN（非TRUE），WHERE只返回TRUE的行，所以NULL行被排除。不是数据库差异，NULL不是0。",
@@ -1801,22 +1801,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "XOR",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "OR",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "AND",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "NOT",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "XOR",
+        "text": "NOT",
         "correct": false
       }
     ],
@@ -1835,22 +1835,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "FROM -> WHERE -> SELECT -> ORDER BY -> LIMIT",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT -> FROM -> WHERE -> ORDER BY -> LIMIT",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "FROM -> WHERE -> ORDER BY -> SELECT -> LIMIT",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "FROM -> SELECT -> WHERE -> ORDER BY -> LIMIT",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "FROM -> WHERE -> SELECT -> ORDER BY -> LIMIT",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT -> FROM -> WHERE -> ORDER BY -> LIMIT",
         "correct": false
       }
     ],
@@ -1869,23 +1869,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "LIKE '%\\%%' ESCAPE '\\'",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "LIKE '%%%'",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "LIKE '%\\%'",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "LIKE '%[%'",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "LIKE '%\\%%' ESCAPE '\\'",
+        "correct": true
       }
     ],
     "explanation": "ESCAPE定义转义字符，\\%%表示字面的%。'%%%'中%仍是通配符，'%\\%'缺少ESCAPE子句可能行为不确定，'[%]'是方括号语法非标准。",
@@ -1939,22 +1939,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "数据有错误",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "name和dept组合去重后比单独dept多，说明name跨部门有区分",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "不同部门的name有重复",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "结果数应该相同",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "数据有错误",
+        "text": "结果数应该相同",
         "correct": false
       }
     ],
@@ -1973,22 +1973,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "'Johnson'",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "'Jnson'",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "'Jonson'",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "'John'",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "'Johnson'",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "'Jnson'",
         "correct": false
       }
     ],
@@ -2007,23 +2007,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "3",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "1, 3",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "1",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "无结果",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "3",
+        "correct": true
       }
     ],
     "explanation": "dept='A'的记录是id=1和id=3，其中salary>4000的是id=3(6000)。id=1的salary=3000不满足>4000。",
@@ -2073,22 +2073,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "统计NULL值数量",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "返回第一个非NULL值",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "返回最后一个非NULL值",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "删除所有NULL值",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "统计NULL值数量",
+        "text": "删除所有NULL值",
         "correct": false
       }
     ],
@@ -2106,22 +2106,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "若expr1=expr2则返回NULL，否则返回expr1",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "若expr1=expr2则返回expr2，否则返回NULL",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "若expr1=NULL则返回expr2",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "若expr1!=expr2则返回NULL",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "若expr1=expr2则返回NULL，否则返回expr1",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "若expr1=expr2则返回expr2，否则返回NULL",
         "correct": false
       }
     ],
@@ -2139,23 +2139,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "替换NULL值为指定值",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "判断是否为数字",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "判断是否为空字符串",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "删除NULL记录",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "替换NULL值为指定值",
+        "correct": true
       }
     ],
     "explanation": "SQL Server的ISNULL函数用指定的替换值替换NULL，语法为ISNULL(expression, replacement)。",
@@ -2205,22 +2205,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "当前年份",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "当前日期和时间",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "当前日期",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "当前时间",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "当前年份",
+        "text": "当前时间",
         "correct": false
       }
     ],
@@ -2238,22 +2238,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "当前日期",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "当前时间",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "当前日期和时间",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "当前月份",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "当前日期",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "当前时间",
         "correct": false
       }
     ],
@@ -2271,23 +2271,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "日期对应的年份",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "日期对应的月份",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "日期对应的天",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "日期对应的季度",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "日期对应的年份",
+        "correct": true
       }
     ],
     "explanation": "YEAR()函数从日期中提取年份，返回一个四位数字，如2024。",
@@ -2337,22 +2337,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "6",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "15",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "8",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "2024",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "6",
+        "text": "2024",
         "correct": false
       }
     ],
@@ -2370,22 +2370,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "YES",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "NO",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "1",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "NULL",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "YES",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "NO",
         "correct": false
       }
     ],
@@ -2403,23 +2403,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "100",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "NULL",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "0",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "ERROR",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "100",
+        "correct": true
       }
     ],
     "explanation": "COALESCE返回第一个非NULL值，前两个参数为NULL，所以返回100。",
@@ -2469,22 +2469,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "ERROR",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "NULL",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "10",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "0",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "ERROR",
+        "text": "0",
         "correct": false
       }
     ],
@@ -2502,22 +2502,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "9",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "10",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "1",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "8",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "9",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "10",
         "correct": false
       }
     ],
@@ -2535,23 +2535,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "2024-01-08",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "2024-01-07",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "2024-01-14",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "2024-01-15",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "2024-01-08",
+        "correct": true
       }
     ],
     "explanation": "DATE_ADD在指定日期上加上时间间隔，1月1日加7天为1月8日。",
@@ -2601,22 +2601,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "2024/08",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "2024-08",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "2024-8",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "24-08",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "2024/08",
+        "text": "24-08",
         "correct": false
       }
     ],
@@ -2634,22 +2634,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT NOW()",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT CURDATE()",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT YEAR(NOW())",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT DATE(NOW())",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT NOW()",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT CURDATE()",
         "correct": false
       }
     ],
@@ -2667,23 +2667,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "0",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "NULL",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "1",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "ERROR",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "0",
+        "correct": true
       }
     ],
     "explanation": "ISNULL将NULL替换为指定值，NULL被替换为0。",
@@ -2733,22 +2733,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "NULLIF",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "COALESCE",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "CASE",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "IF",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "NULLIF",
+        "text": "IF",
         "correct": false
       }
     ],
@@ -2766,22 +2766,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "IFNULL",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "DATEDIFF",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "DATE_ADD",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "NULLIF",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "IFNULL",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "DATEDIFF",
         "correct": false
       }
     ],
@@ -2799,23 +2799,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "DATEDIFF",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "DATE_ADD",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "DATE_SUB",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "TIMESTAMPDIFF",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "DATEDIFF",
+        "correct": true
       }
     ],
     "explanation": "DATEDIFF计算两个日期之间的天数差，是MySQL标准日期差函数。",
@@ -2865,22 +2865,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "缺少GROUP BY",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "CAS应改为CASE",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "WHEN应改为WHERE",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "THEN应改为ELSE",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "缺少GROUP BY",
+        "text": "THEN应改为ELSE",
         "correct": false
       }
     ],
@@ -2898,22 +2898,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "COALLESCE应改为COALESCE",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "0应改为NULL",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "缺少FROM",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "AS应去掉",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "COALLESCE应改为COALESCE",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "0应改为NULL",
         "correct": false
       }
     ],
@@ -2931,23 +2931,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "第二个参数不能为空",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "IFNULL拼写错误",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "name不能为参数",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "缺少WHERE",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "第二个参数不能为空",
+        "correct": true
       }
     ],
     "explanation": "IFNULL需要两个参数，第二个参数是NULL时的替换值，不能为空。",
@@ -2997,22 +2997,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "日期格式错误",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "DATEDIFF需要两个日期参数",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "DATEDIFF拼写错误",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "AS应去掉",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "日期格式错误",
+        "text": "AS应去掉",
         "correct": false
       }
     ],
@@ -3030,22 +3030,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "%m是数字月份，%M是月份英文名",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "%m是分钟，%M是月份",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "两者相同",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "%m是月份英文名，%M是数字月份",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "%m是数字月份，%M是月份英文名",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "%m是分钟，%M是月份",
         "correct": false
       }
     ],
@@ -3063,23 +3063,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "将字符串按指定格式解析为日期",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "将日期转换为字符串",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "计算日期差",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "格式化日期输出",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "将字符串按指定格式解析为日期",
+        "correct": true
       }
     ],
     "explanation": "STR_TO_DATE将字符串按指定格式解析为日期值，是DATE_FORMAT的逆操作。",
@@ -3129,22 +3129,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "比较两个日期",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "将日期截断到指定精度",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "删除日期记录",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "延长日期",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "比较两个日期",
+        "text": "延长日期",
         "correct": false
       }
     ],
@@ -3162,22 +3162,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "NULL",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "0",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "空字符串",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "ERROR",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "NULL",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "0",
         "correct": false
       }
     ],
@@ -3195,23 +3195,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "B",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "A",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "C",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "NULL",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "B",
+        "correct": true
       }
     ],
     "explanation": "1=0为假跳过第一个WHEN，1=1为真匹配第二个WHEN，返回'B'。",
@@ -3261,22 +3261,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "26",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "27",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "28",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "1",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "26",
+        "text": "1",
         "correct": false
       }
     ],
@@ -3294,22 +3294,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "9",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "10",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "1",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "8",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "9",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "10",
         "correct": false
       }
     ],
@@ -3327,23 +3327,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "星期几的英文全称",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "月份的英文缩写",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "日期数字",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "四位年份",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "星期几的英文全称",
+        "correct": true
       }
     ],
     "explanation": "DATE_FORMAT的%W返回星期几的英文全称，如Monday、Tuesday等。",
@@ -3393,22 +3393,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "DATE_SUB",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "TIMESTAMPDIFF",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "DATEDIFF",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "DATE_ADD",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "DATE_SUB",
+        "text": "DATE_ADD",
         "correct": false
       }
     ],
@@ -3426,22 +3426,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "DATE_ADD",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "DATEDIFF",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "DATE_FORMAT",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "DATE_SUB",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "DATE_ADD",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "DATEDIFF",
         "correct": false
       }
     ],
@@ -3459,23 +3459,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "ELSE",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "WHEN",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "OR",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "AND",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "ELSE",
+        "correct": true
       }
     ],
     "explanation": "CASE WHEN中ELSE子句指定不满足条件时的返回值，这里是'不及格'。",
@@ -3525,22 +3525,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "日期格式错误",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "格式字符串应使用%Y-%m-%d",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "DATE_FORMAT拼写错误",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "缺少表名",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "日期格式错误",
+        "text": "缺少表名",
         "correct": false
       }
     ],
@@ -3558,22 +3558,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "NULLIF(0,0)返回NULL导致运算结果为NULL",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "NULLIF拼写错误",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "加号应改为减号",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "缺少ELSE",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "NULLIF(0,0)返回NULL导致运算结果为NULL",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "NULLIF拼写错误",
         "correct": false
       }
     ],
@@ -3591,23 +3591,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "第一个参数DAY不应加引号",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "TIMESTAMPDIFF拼写错误",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "日期格式错误",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "缺少AS",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "第一个参数DAY不应加引号",
+        "correct": true
       }
     ],
     "explanation": "TIMESTAMPDIFF的第一个参数是单位关键字，不应加引号，加引号会被当作字符串处理。",
@@ -3657,22 +3657,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "2024-06-01",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "2024-07-01",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "2024-01-01",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "2024-08-01",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "2024-06-01",
+        "text": "2024-08-01",
         "correct": false
       }
     ],
@@ -3690,22 +3690,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "TIMESTAMPDIFF支持指定时间单位，DATEDIFF只计算天数差",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "两者完全相同",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "DATEDIFF支持更多时间单位",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "TIMESTAMPDIFF只能计算月差",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "TIMESTAMPDIFF支持指定时间单位，DATEDIFF只计算天数差",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "两者完全相同",
         "correct": false
       }
     ],
@@ -3724,23 +3724,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "B",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "A",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "C",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "NULL",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "B",
+        "correct": true
       }
     ],
     "explanation": "COALESCE第一个参数NULL跳过，第二个参数是CASE表达式，1=0为假返回'B'，COALESCE返回'B'。",
@@ -3792,22 +3792,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "DATE_ADD(birth_date, INTERVAL 1 YEAR)",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "TIMESTAMPDIFF(YEAR, birth_date, CURDATE())",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "DATEDIFF(birth_date, CURDATE())",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "YEAR(CURDATE()) - YEAR(birth_date)",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "DATE_ADD(birth_date, INTERVAL 1 YEAR)",
+        "text": "YEAR(CURDATE()) - YEAR(birth_date)",
         "correct": false
       }
     ],
@@ -3826,22 +3826,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "NULLIF",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "COALESCE",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "IFNULL",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "ISNULL",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "NULLIF",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "COALESCE",
         "correct": false
       }
     ],
@@ -3859,23 +3859,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "DATE_TRUNC",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "DATEDIFF",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "DATE_ADD",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "DATE_FORMAT",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "DATE_TRUNC",
+        "correct": true
       }
     ],
     "explanation": "DATE_TRUNC将日期截断到指定精度，截断到月份即返回该月1号。",
@@ -3927,22 +3927,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "缺少FROM子句",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "无错误，语句正确",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "STR_TO_DATE格式错误",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "DATE_FORMAT格式错误",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "缺少FROM子句",
+        "text": "DATE_FORMAT格式错误",
         "correct": false
       }
     ],
@@ -3961,22 +3961,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "10",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "9",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "11",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "0",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "10",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "9",
         "correct": false
       }
     ],
@@ -3995,23 +3995,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "IF是MySQL特有函数，CASE WHEN是SQL标准",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "IF是SQL标准，CASE WHEN是MySQL特有",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "两者完全相同",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "IF能处理多个条件分支",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "IF是MySQL特有函数，CASE WHEN是SQL标准",
+        "correct": true
       }
     ],
     "explanation": "IF()是MySQL特有的控制流函数，只支持单一条件判断，CASE WHEN是SQL标准语法，支持多条件分支。",
@@ -4063,22 +4063,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "SELECT category, SUM(amount) FROM sales ORDER BY category",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "SELECT category, SUM(amount) FROM sales GROUP BY category",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "SELECT category, COUNT(amount) FROM sales GROUP BY category",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "SELECT SUM(amount) FROM sales GROUP BY category",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "SELECT category, SUM(amount) FROM sales ORDER BY category",
+        "text": "SELECT SUM(amount) FROM sales GROUP BY category",
         "correct": false
       }
     ],
@@ -4096,22 +4096,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "计算某列的平均值",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "计算某列的总和",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "计算某列的最大值",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "计算某列的行数",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "计算某列的平均值",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "计算某列的总和",
         "correct": false
       }
     ],
@@ -4130,23 +4130,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT MAX(price) FROM products",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "SELECT MIN(price) FROM products",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "SELECT price FROM products WHERE price = MAX",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "SELECT SUM(price) FROM products",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "SELECT MAX(price) FROM products",
+        "correct": true
       }
     ],
     "explanation": "MAX(price)返回price列的最大值，即最高价格。B返回最低价格；C语法错误，MAX不能在WHERE中直接使用；D返回价格总和。",
@@ -4198,22 +4198,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "HAVING只能与ORDER BY一起使用",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "HAVING用于过滤分组，WHERE用于过滤行",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "HAVING用于过滤行，WHERE用于过滤分组",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "HAVING和WHERE功能完全相同",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "HAVING只能与ORDER BY一起使用",
+        "text": "HAVING和WHERE功能完全相同",
         "correct": false
       }
     ],
@@ -4232,22 +4232,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "COUNT(*)统计所有行，COUNT(column)忽略NULL值",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "COUNT(*)忽略NULL值，COUNT(column)统计所有行",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "两者完全相同",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "COUNT(*)只能用于主键列",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "COUNT(*)统计所有行，COUNT(column)忽略NULL值",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "COUNT(*)忽略NULL值，COUNT(column)统计所有行",
         "correct": false
       }
     ],
@@ -4266,23 +4266,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "统计某列不同值的数量",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "统计某列所有值的数量（含重复）",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "删除某列的重复行",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "统计表中所有行数",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "统计某列不同值的数量",
+        "correct": true
       }
     ],
     "explanation": "COUNT(DISTINCT column)统计该列中不同（去重后）值的数量。统计含重复值用COUNT(column)，删除重复行用DISTINCT单独使用，统计所有行用COUNT(*)。",
@@ -4334,22 +4334,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "NULL",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "25",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "20",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "30",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "NULL",
+        "text": "30",
         "correct": false
       }
     ],
@@ -4368,22 +4368,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "4",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "NULL",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "2",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "0",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "4",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "NULL",
         "correct": false
       }
     ],
@@ -4402,23 +4402,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "5",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "3",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "NULL",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "1",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "5",
+        "correct": true
       }
     ],
     "explanation": "MAX忽略NULL值，返回非NULL值中的最大值5。MAX不会因为存在NULL而返回NULL。",
@@ -4469,22 +4469,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "SELECT dept, COUNT(*) FROM emp HAVING COUNT(*) > 5",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "SELECT dept, COUNT(*) FROM emp GROUP BY dept HAVING COUNT(*) > 5",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "SELECT dept, COUNT(*) FROM emp WHERE COUNT(*) > 5 GROUP BY dept",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "SELECT dept, COUNT(*) FROM emp GROUP BY dept WHERE COUNT(*) > 5",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "SELECT dept, COUNT(*) FROM emp HAVING COUNT(*) > 5",
+        "text": "SELECT dept, COUNT(*) FROM emp GROUP BY dept WHERE COUNT(*) > 5",
         "correct": false
       }
     ],
@@ -4503,22 +4503,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "name列不在GROUP BY中且不在聚合函数中",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "COUNT(*)语法错误",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "GROUP BY dept应改为ORDER BY dept",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "没有问题",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "name列不在GROUP BY中且不在聚合函数中",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "COUNT(*)语法错误",
         "correct": false
       }
     ],
@@ -4537,23 +4537,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "缺少GROUP BY子句",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "HAVING应改为WHERE",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "COUNT(*) > 3语法错误",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "没有问题",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "缺少GROUP BY子句",
+        "correct": true
       }
     ],
     "explanation": "HAVING必须与GROUP BY配合使用。缺少GROUP BY时，无法确定按什么分组，HAVING的条件也无从判断。WHERE用于过滤行而非分组。",
@@ -4605,22 +4605,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "0",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "3",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "5",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "2",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "0",
+        "text": "2",
         "correct": false
       }
     ],
@@ -4639,22 +4639,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT customer_id, SUM(amount) FROM orders GROUP BY customer_id",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT customer_id, COUNT(amount) FROM orders GROUP BY customer_id",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT SUM(amount) FROM orders GROUP BY customer_id",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT customer_id, AVG(amount) FROM orders GROUP BY customer_id",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT customer_id, SUM(amount) FROM orders GROUP BY customer_id",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT customer_id, COUNT(amount) FROM orders GROUP BY customer_id",
         "correct": false
       }
     ],
@@ -4673,23 +4673,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SUM不能对*使用，必须指定列名",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "SUM函数不存在",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "缺少GROUP BY",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "没有问题",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "SUM不能对*使用，必须指定列名",
+        "correct": true
       }
     ],
     "explanation": "SUM(*)语法错误，SUM需要指定具体列名如SUM(amount)。COUNT(*)可以对*使用，但SUM不行。",
@@ -4741,22 +4741,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "4",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "3",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "2",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "1",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "4",
+        "text": "1",
         "correct": false
       }
     ],
@@ -4775,22 +4775,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT category, MAX(price) FROM products GROUP BY category",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT category, MIN(price) FROM products GROUP BY category",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT MAX(price) FROM products GROUP BY category",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT category, MAX(price) FROM products",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT category, MAX(price) FROM products GROUP BY category",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT category, MIN(price) FROM products GROUP BY category",
         "correct": false
       }
     ],
@@ -4809,23 +4809,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "WHERE中不能使用聚合函数，应改用HAVING",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "GROUP BY dept应放在WHERE前面",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "AVG(salary) > 5000语法错误",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "没有问题",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "WHERE中不能使用聚合函数，应改用HAVING",
+        "correct": true
       }
     ],
     "explanation": "WHERE中不能使用聚合函数。WHERE在分组前执行，无法使用聚合结果。应改用HAVING AVG(salary) > 5000来过滤分组。",
@@ -4877,22 +4877,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "5",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "1",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "3",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "NULL",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "5",
+        "text": "NULL",
         "correct": false
       }
     ],
@@ -4911,22 +4911,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT subject, AVG(score) FROM exams GROUP BY subject",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT subject, SUM(score) FROM exams GROUP BY subject",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT AVG(score) FROM exams GROUP BY subject",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT subject, COUNT(score) FROM exams GROUP BY subject",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT subject, AVG(score) FROM exams GROUP BY subject",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT subject, SUM(score) FROM exams GROUP BY subject",
         "correct": false
       }
     ],
@@ -4945,23 +4945,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "city不在GROUP BY中，无法与分组正确对应",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "COUNT(*)不能与GROUP BY一起使用",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "GROUP BY应该包含所有SELECT中的列",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "没有问题",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "city不在GROUP BY中，无法与分组正确对应",
+        "correct": true
       }
     ],
     "explanation": "city不在GROUP BY中也不在聚合函数中，每个country分组可能包含多个city，无法确定city值。这不是说GROUP BY要包含所有SELECT列（聚合列除外），而是非聚合列必须在GROUP BY中。",
@@ -5013,22 +5013,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "SELECT COUNT(*) FROM emp GROUP BY dept",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "SELECT COUNT(DISTINCT dept) FROM emp",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "SELECT COUNT(dept) FROM emp",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "SELECT DISTINCT COUNT(dept) FROM emp",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "SELECT COUNT(*) FROM emp GROUP BY dept",
+        "text": "SELECT DISTINCT COUNT(dept) FROM emp",
         "correct": false
       }
     ],
@@ -5048,22 +5048,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "dept=B，7人",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "dept=A和dept=B",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "dept=A、B、C",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "无结果",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "dept=B，7人",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "dept=A和dept=B",
         "correct": false
       }
     ],
@@ -5083,23 +5083,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT region, SUM(amount) FROM sales WHERE year=2023 GROUP BY region HAVING SUM(amount) > 1000000",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "SELECT region, SUM(amount) FROM sales HAVING SUM(amount) > 1000000 WHERE year=2023",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "SELECT region, SUM(amount) FROM sales GROUP BY region HAVING SUM(amount) > 1000000",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "SELECT region, SUM(amount) FROM sales WHERE year=2023 GROUP BY region WHERE SUM(amount) > 1000000",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "SELECT region, SUM(amount) FROM sales WHERE year=2023 GROUP BY region HAVING SUM(amount) > 1000000",
+        "correct": true
       }
     ],
     "explanation": "A正确：先用WHERE过滤2023年数据，再GROUP BY按地区分组，最后HAVING过滤超100万的地区。B的WHERE和HAVING顺序错误；C缺少year=2023的WHERE条件；D用两个WHERE是错误的。",
@@ -5152,22 +5152,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "COUNT(*)=3, COUNT(DISTINCT dept)=10",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "COUNT(*)=10, COUNT(DISTINCT dept)=3",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "COUNT(*)=3, COUNT(DISTINCT dept)=3",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "COUNT(*)=10, COUNT(DISTINCT dept)=10",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "COUNT(*)=3, COUNT(DISTINCT dept)=10",
+        "text": "COUNT(*)=10, COUNT(DISTINCT dept)=10",
         "correct": false
       }
     ],
@@ -5186,22 +5186,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "没有问题",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "WHERE和HAVING不能同时使用",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "GROUP BY应在WHERE之前",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "HAVING中不能用COUNT(*)",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "没有问题",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "WHERE和HAVING不能同时使用",
         "correct": false
       }
     ],
@@ -5220,23 +5220,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT year, quarter, SUM(amount) FROM sales GROUP BY year, quarter",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "SELECT year, quarter, COUNT(amount) FROM sales GROUP BY year, quarter",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "SELECT year, SUM(amount) FROM sales GROUP BY year, quarter",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "SELECT year, quarter, SUM(amount) FROM sales GROUP BY year",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "SELECT year, quarter, SUM(amount) FROM sales GROUP BY year, quarter",
+        "correct": true
       }
     ],
     "explanation": "A正确：按year和quarter两列分组并求和。B用COUNT是计数；C的SELECT缺少quarter分组列对应关系错误；D只按year分组缺少quarter。",
@@ -5289,22 +5289,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "使用ORDER BY和LIMIT即可",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "使用子查询配合GROUP BY和聚合函数",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "直接在WHERE中使用MAX函数",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "使用HAVING子句即可",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "使用ORDER BY和LIMIT即可",
+        "text": "使用HAVING子句即可",
         "correct": false
       }
     ],
@@ -5323,22 +5323,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT dept, COUNT(DISTINCT job) FROM emp GROUP BY dept",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT dept, COUNT(job) FROM emp GROUP BY dept",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT dept, DISTINCT COUNT(job) FROM emp GROUP BY dept",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT dept, COUNT(DISTINCT *) FROM emp GROUP BY dept",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT dept, COUNT(DISTINCT job) FROM emp GROUP BY dept",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT dept, COUNT(job) FROM emp GROUP BY dept",
         "correct": false
       }
     ],
@@ -5357,23 +5357,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "category条件应在WHERE中，COUNT(*)条件应在HAVING中",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "AND不能连接HAVING条件",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "GROUP BY和HAVING不能一起使用",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "COUNT(*) > 5语法错误",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "category条件应在WHERE中，COUNT(*)条件应在HAVING中",
+        "correct": true
       }
     ],
     "explanation": "category='Electronics'是行级过滤应放在WHERE中，COUNT(*)>5是分组过滤放在HAVING中。AND可以在HAVING中使用，但最佳实践是将行级条件移至WHERE。",
@@ -5426,22 +5426,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "A: 5,3; B: 3,2",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "A: 3,5; B: 2,3",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "A: 5,5; B: 3,3",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "A: 3,3; B: 2,2",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "A: 5,3; B: 3,2",
+        "text": "A: 3,3; B: 2,2",
         "correct": false
       }
     ],
@@ -5461,22 +5461,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "HAVING中应使用AVG(price)而非别名avg_price",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "AS关键字不能用于聚合列",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "GROUP BY不能与HAVING一起使用",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "没有问题",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "HAVING中应使用AVG(price)而非别名avg_price",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "AS关键字不能用于聚合列",
         "correct": false
       }
     ],
@@ -5496,23 +5496,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SUM和AVG返回NULL，COUNT返回0",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "所有聚合函数都返回NULL",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "所有聚合函数都返回0",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "COUNT返回NULL，SUM返回0",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "SUM和AVG返回NULL，COUNT返回0",
+        "correct": true
       }
     ],
     "explanation": "当所有值都是NULL时，SUM和AVG返回NULL（因为没有非NULL值参与计算），COUNT返回0（计数值为0而非NULL）。这是聚合函数对NULL的特殊处理。",
@@ -5564,22 +5564,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "没有问题",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "GROUP BY后应为列名而非聚合函数",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "COUNT(*)不能出现在SELECT中",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "dept不应出现在SELECT中",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "没有问题",
+        "text": "dept不应出现在SELECT中",
         "correct": false
       }
     ],
@@ -5599,22 +5599,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "COUNT=5, SUM=10",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "COUNT=3, SUM=10",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "COUNT=5, SUM=8",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "COUNT=3, SUM=8",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "COUNT=5, SUM=10",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "COUNT=3, SUM=10",
         "correct": false
       }
     ],
@@ -5633,23 +5633,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "对不同值求和，重复值只计一次",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "对所有行求和",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "统计不同值的个数",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "删除重复行后求和",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "对不同值求和，重复值只计一次",
+        "correct": true
       }
     ],
     "explanation": "SUM(DISTINCT column)先对column去重，再对不同的值求和。统计不同值个数用COUNT(DISTINCT column)，删除重复行用DISTINCT关键字。",
@@ -5701,22 +5701,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "没有问题",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "当dept为NULL的行中同名人员可能被归为一组，COUNT(*)统计的不是人数而是组内行数",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "IS NULL语法错误",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "COUNT(*)不能与GROUP BY一起使用",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "没有问题",
+        "text": "COUNT(*)不能与GROUP BY一起使用",
         "correct": false
       }
     ],
@@ -5736,22 +5736,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT dept FROM emp GROUP BY dept HAVING COUNT(*) = (SELECT MAX(c) FROM (SELECT COUNT(*) AS c FROM emp GROUP BY dept) t)",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT dept FROM emp WHERE COUNT(*) = MAX(COUNT(*))",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT dept, MAX(COUNT(*)) FROM emp GROUP BY dept",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT dept FROM emp GROUP BY dept ORDER BY COUNT(*) DESC LIMIT 1",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT dept FROM emp GROUP BY dept HAVING COUNT(*) = (SELECT MAX(c) FROM (SELECT COUNT(*) AS c FROM emp GROUP BY dept) t)",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT dept FROM emp WHERE COUNT(*) = MAX(COUNT(*))",
         "correct": false
       }
     ],
@@ -5771,23 +5771,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "A和C",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "A、B、C",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "只有A",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "B和C",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "A和C",
+        "correct": true
       }
     ],
     "explanation": "A: SUM=5000>4000且COUNT=3>=3满足；B: SUM=8000>4000但COUNT=2<3不满足；C: SUM=6000>4000且COUNT=4>=3满足。结果为A和C。",
@@ -5841,22 +5841,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "没有问题",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "HAVING条件语义错误，将SUM与另一列的MAX比较而非全局最大SUM",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "GROUP BY product语法错误",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "SUM和MAX不能同时出现在HAVING中",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "没有问题",
+        "text": "SUM和MAX不能同时出现在HAVING中",
         "correct": false
       }
     ],
@@ -5876,22 +5876,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT dept, SUM(CASE WHEN salary > 5000 THEN 1 ELSE 0 END) FROM emp GROUP BY dept",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT dept, COUNT(salary > 5000) FROM emp GROUP BY dept",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT dept, COUNT(CASE WHEN salary > 5000 THEN 1 END) FROM emp GROUP BY dept",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT dept, AVG(CASE WHEN salary > 5000 THEN 1 ELSE 0 END) FROM emp GROUP BY dept",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT dept, SUM(CASE WHEN salary > 5000 THEN 1 ELSE 0 END) FROM emp GROUP BY dept",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT dept, COUNT(salary > 5000) FROM emp GROUP BY dept",
         "correct": false
       }
     ],
@@ -5911,23 +5911,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT class, SUM(CASE WHEN score>=60 THEN 1 ELSE 0 END) AS pass, SUM(CASE WHEN score<60 THEN 1 ELSE 0 END) AS fail FROM students GROUP BY class",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "SELECT class, COUNT(CASE WHEN score>=60 THEN 1 END), COUNT(CASE WHEN score<60 THEN 1 END) FROM students GROUP BY class",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "SELECT class, COUNT(score>=60), COUNT(score<60) FROM students GROUP BY class",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "SELECT class, SUM(score>=60), SUM(score<60) FROM students GROUP BY class",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "SELECT class, SUM(CASE WHEN score>=60 THEN 1 ELSE 0 END) AS pass, SUM(CASE WHEN score<60 THEN 1 ELSE 0 END) AS fail FROM students GROUP BY class",
+        "correct": true
       }
     ],
     "explanation": "A使用SUM+CASE WHEN实现条件计数，是最标准的方法。B的COUNT+CASE缺少ELSE可能产生问题；C的COUNT(条件)语法错误；D的SUM(条件)虽然某些数据库支持布尔求和，但不是标准SQL。",
@@ -5981,22 +5981,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "SELECT DISTINCT category, COUNT(price) FROM products GROUP BY category",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "SELECT category, COUNT(DISTINCT price) FROM products GROUP BY category",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "SELECT category, DISTINCT COUNT(price) FROM products GROUP BY category",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "SELECT category, COUNT(price) FROM products GROUP BY category",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "SELECT DISTINCT category, COUNT(price) FROM products GROUP BY category",
+        "text": "SELECT category, COUNT(price) FROM products GROUP BY category",
         "correct": false
       }
     ],
@@ -6016,22 +6016,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "ORDER BY应在HAVING之后",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "HAVING不能与GROUP BY一起使用",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "COUNT(*)不能用在HAVING中",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "没有问题",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "ORDER BY应在HAVING之后",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "HAVING不能与GROUP BY一起使用",
         "correct": false
       }
     ],
@@ -6051,23 +6051,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "此查询逻辑有误，DISTINCT应作用于列而非表达式",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "80",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "110",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "50",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "此查询逻辑有误，DISTINCT应作用于列而非表达式",
+        "correct": true
       }
     ],
     "explanation": "SUM(DISTINCT price*quantity)语法合法但逻辑可疑。price*quantity的DISTINCT值依赖于计算后的去重。更合理的做法是SUM(quantity * price)或分开处理。此题正确答案是A，指出逻辑问题。",
@@ -6117,22 +6117,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "CONCAT_WS只能连接两个字段",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "CONCAT_WS可以指定分隔符",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "CONCAT_WS不支持NULL值",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "CONCAT_WS结果长度更短",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "CONCAT_WS只能连接两个字段",
+        "text": "CONCAT_WS结果长度更短",
         "correct": false
       }
     ],
@@ -6150,22 +6150,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "Hello",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "World",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "Hello World",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "H",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "Hello",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "World",
         "correct": false
       }
     ],
@@ -6184,23 +6184,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "MyS",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "SQL",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "MySQL",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "M",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "MyS",
+        "correct": true
       }
     ],
     "explanation": "LEFT(str, n)返回字符串最左边的n个字符。LEFT('MySQL',3)返回'MyS'。RIGHT返回最右边的字符。",
@@ -6252,22 +6252,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "HELLO 和 WORLD",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "HELLO 和 world",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "Hello 和 World",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "hello 和 WORLD",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "HELLO 和 WORLD",
+        "text": "hello 和 WORLD",
         "correct": false
       }
     ],
@@ -6285,22 +6285,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "Hello",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "  Hello",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "Hello  ",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "  Hello  ",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "Hello",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "  Hello",
         "correct": false
       }
     ],
@@ -6319,23 +6319,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "Hello(右侧有空格) 和 (左侧有空格)Hello",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "都返回Hello",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "(左侧有空格)Hello 和 Hello(右侧有空格)",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "都返回  Hello",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "Hello(右侧有空格) 和 (左侧有空格)Hello",
+        "correct": true
       }
     ],
     "explanation": "LTRIM只去掉左侧空格，结果右侧仍保留空格；RTRIM只去掉右侧空格，左侧仍保留空格。二者结合等效于TRIM。",
@@ -6385,22 +6385,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "ACB",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "CBA",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "ABC",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "BAC",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "ACB",
+        "text": "BAC",
         "correct": false
       }
     ],
@@ -6418,22 +6418,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "ABABAB",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "AAA",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "ABB",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "AB3",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "ABABAB",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "AAA",
         "correct": false
       }
     ],
@@ -6452,23 +6452,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "***Hi",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "Hi***",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "**Hi*",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "Hi**",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "***Hi",
+        "correct": true
       }
     ],
     "explanation": "LPAD(str, len, padstr)在字符串左侧填充指定字符到指定长度。'Hi'左侧填充'*'到长度5，得到'***Hi'。",
@@ -6518,22 +6518,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "2",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "8",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "7",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "0",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "2",
+        "text": "0",
         "correct": false
       }
     ],
@@ -6551,22 +6551,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "将字符串'123'转为有符号整数",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "将数字123转为字符串",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "将字符串'123'转为日期",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "将字符串'123'转为浮点数",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "将字符串'123'转为有符号整数",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "将数字123转为字符串",
         "correct": false
       }
     ],
@@ -6584,23 +6584,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "CONVERT支持指定字符集转换，CAST语法更简洁",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "CONVERT只能用于数字转换",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "CAST支持字符集转换",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "两者完全相同",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "CONVERT支持指定字符集转换，CAST语法更简洁",
+        "correct": true
       }
     ],
     "explanation": "CONVERT可以指定字符集（如utf8），CAST语法更简洁但功能类似。CONVERT(expr USING charset)是独有语法。",
@@ -6650,22 +6650,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "类型转换",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "正则表达式匹配",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "字符串替换",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "字符串截取",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "类型转换",
+        "text": "字符串截取",
         "correct": false
       }
     ],
@@ -6683,22 +6683,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "ABC",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "A B C",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "A,B,C",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "AB",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "ABC",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "A B C",
         "correct": false
       }
     ],
@@ -6716,23 +6716,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "'-'",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "'A-B-C'",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "'ABC'",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "' '",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "'-'",
+        "correct": true
       }
     ],
     "explanation": "CONCAT_WS第一个参数为分隔符，要得到'A-B-C'，分隔符应为'-'。其他选项不会产生该结果。",
@@ -6782,22 +6782,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "Hellox",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "Hello",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "Helloxxx",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "xxxHello",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "Hellox",
+        "text": "xxxHello",
         "correct": false
       }
     ],
@@ -6815,22 +6815,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "3",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "3.14",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "4",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "0",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "3",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "3.14",
         "correct": false
       }
     ],
@@ -6848,23 +6848,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "0",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "1",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "-1",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "NULL",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "0",
+        "correct": true
       }
     ],
     "explanation": "INSTR找不到子串时返回0，不是-1也不是NULL。INSTR('Hello','xyz')=0表示未找到。",
@@ -6915,22 +6915,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "COUNT",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "CHAR_LENGTH",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "LENGTH",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "SIZE",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "COUNT",
+        "text": "SIZE",
         "correct": false
       }
     ],
@@ -6949,22 +6949,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "Hi***",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "***Hi",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "Hi**",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "*Hi**",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "Hi***",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "***Hi",
         "correct": false
       }
     ],
@@ -6982,23 +6982,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "0",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "ABC",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "1",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "NULL",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "0",
+        "correct": true
       }
     ],
     "explanation": "MySQL中字符串与数字运算时，非数字字符串转为0。'ABC'+0=0，'123'+0=123。",
@@ -7048,22 +7048,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "SUBSTRING(str, 1)",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "REPLACE(str, ' ', '')",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "TRIM(str)",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "LTRIM(str)",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "SUBSTRING(str, 1)",
+        "text": "LTRIM(str)",
         "correct": false
       }
     ],
@@ -7082,22 +7082,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "NULL",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "Hello",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "HelloNULL",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "0",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "NULL",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "Hello",
         "correct": false
       }
     ],
@@ -7116,23 +7116,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "A-B",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "A--B",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "NULL",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "A-B-NULL",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "A-B",
+        "correct": true
       }
     ],
     "explanation": "CONCAT_WS跳过NULL值，只连接非NULL参数。'A'和'B'用'-'连接，NULL被跳过，结果为'A-B'。",
@@ -7182,22 +7182,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "CAST('42' AS DECIMAL(10,2))",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "CAST('42' AS SIGNED)",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "CAST('42' AS VARCHAR)",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "CAST('42' AS DATE)",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "CAST('42' AS DECIMAL(10,2))",
+        "text": "CAST('42' AS DATE)",
         "correct": false
       }
     ],
@@ -7215,22 +7215,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "1",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "0",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "true",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "2024",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "1",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "0",
         "correct": false
       }
     ],
@@ -7249,23 +7249,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "CHAR",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "SIGNED",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "DATE",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "JSON",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "CHAR",
+        "correct": true
       }
     ],
     "explanation": "CAST(x AS CHAR)将表达式转为字符串。SIGNED用于整数，DATE用于日期，JSON用于JSON类型。",
@@ -7316,22 +7316,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "0",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "3",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "6",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "9",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "0",
+        "text": "9",
         "correct": false
       }
     ],
@@ -7350,22 +7350,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "CONCAT中任一参数为NULL则整个结果为NULL",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "CONCAT不支持NULL参数",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "name列不存在",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "CONCAT返回值类型为NULL",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "CONCAT中任一参数为NULL则整个结果为NULL",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "CONCAT不支持NULL参数",
         "correct": false
       }
     ],
@@ -7384,23 +7384,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "xxbbyy",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "aabbcc",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "xxbcc",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "aabbyy",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "xxbbyy",
+        "correct": true
       }
     ],
     "explanation": "先执行内层REPLACE将'a'替换为'x'得到'xxbbcc'，再执行外层将'c'替换为'y'得到'xxbbyy'。",
@@ -7451,22 +7451,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "6 和 6",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "2 和 6",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "6 和 2",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "2 和 2",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "6 和 6",
+        "text": "2 和 2",
         "correct": false
       }
     ],
@@ -7485,22 +7485,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "数值 3.14",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "字符串 '3.14'",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "数值 3",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "NULL",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "数值 3.14",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "字符串 '3.14'",
         "correct": false
       }
     ],
@@ -7519,23 +7519,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "AB",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "xAB",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "ABC",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "Ax",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "AB",
+        "correct": true
       }
     ],
     "explanation": "LPAD目标长度小于原字符串长度时，截断到指定长度。LPAD('ABC',2,'x')截断为'AB'，不会报错。",
@@ -7585,22 +7585,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "RTRIM(str, 'a')",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "TRIM(BOTH 'a' FROM str)",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "REPLACE(str, 'a', '')",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "LTRIM(str, 'a')",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "RTRIM(str, 'a')",
+        "text": "LTRIM(str, 'a')",
         "correct": false
       }
     ],
@@ -7618,22 +7618,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "空字符串",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "A",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "NULL",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "0",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "空字符串",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "A",
         "correct": false
       }
     ],
@@ -7651,23 +7651,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "1",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "0",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "3",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "abc",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "1",
+        "correct": true
       }
     ],
     "explanation": "正则'a.c'中.匹配任意单个字符，'abc'中a和c之间是b，匹配成功，返回1。",
@@ -7717,22 +7717,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "'5'",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "1（真）",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "0（假）",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "NULL",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "'5'",
+        "text": "NULL",
         "correct": false
       }
     ],
@@ -7751,22 +7751,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "CONVERT支持USING charset语法",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "CAST支持USING语法",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "两者语法完全相同",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "CONVERT不支持DECIMAL类型",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "CONVERT支持USING charset语法",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "CAST支持USING语法",
         "correct": false
       }
     ],
@@ -7784,23 +7784,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "1",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "0",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "abc123def",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "3",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "1",
+        "correct": true
       }
     ],
     "explanation": "[a-z]+匹配字母序列，[0-9]+匹配数字序列，再次[a-z]+匹配字母。'abc123def'完全匹配该模式，返回1。",
@@ -7851,22 +7851,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "ABC长度不足",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "REGEXP默认区分大小写（取决于排序规则）",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "REGEXP不支持小写字母",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "REGEXP语法错误",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "ABC长度不足",
+        "text": "REGEXP语法错误",
         "correct": false
       }
     ],
@@ -7885,22 +7885,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "a,b,c",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "a,,b,,c",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "NULL",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "a,b,c,",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "a,b,c",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "a,,b,,c",
         "correct": false
       }
     ],
@@ -7919,23 +7919,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "9.9",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "10.0",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "9.99",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "报错",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "9.9",
+        "correct": true
       }
     ],
     "explanation": "DECIMAL(3,1)表示总共3位、小数1位。9.99截断到1位小数为9.9。不是四舍五入而是截断（视实现而定）。",
@@ -7987,22 +7987,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "NULL",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "1",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "0",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "1a",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "NULL",
+        "text": "1a",
         "correct": false
       }
     ],
@@ -8021,22 +8021,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "LOCATE(substr, str, pos)，INSTR(str, substr)",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "两者参数顺序相同",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "INSTR(substr, str, pos)",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "LOCATE(str, substr)",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "LOCATE(substr, str, pos)，INSTR(str, substr)",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "两者参数顺序相同",
         "correct": false
       }
     ],
@@ -8055,23 +8055,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "将字符串的字符集转为utf8mb4",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "将字符串的数据类型转为utf8mb4",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "将排序规则设为utf8mb4",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "创建utf8mb4编码的表",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "将字符串的字符集转为utf8mb4",
+        "correct": true
       }
     ],
     "explanation": "CONVERT(expr USING charset)改变字符串的字符集编码。utf8mb4支持4字节UTF-8字符（如emoji）。不是改变排序规则。",
@@ -8154,22 +8154,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "两个结果集的并集",
+        "text": "两个结果集的笛卡尔积",
         "correct": false
       },
       {
         "label": "B",
+        "text": "两个结果集的并集",
+        "correct": false
+      },
+      {
+        "label": "C",
         "text": "两个结果集的交集",
         "correct": true
       },
       {
-        "label": "C",
-        "text": "两个结果集的差集",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "两个结果集的笛卡尔积",
+        "text": "两个结果集的差集",
         "correct": false
       }
     ],
@@ -8187,23 +8187,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "返回两个结果集的交集",
-        "correct": false
-      },
-      {
-        "label": "B",
-        "text": "返回第一个结果集中存在但第二个结果集中不存在的行",
-        "correct": true
-      },
-      {
-        "label": "C",
         "text": "返回两个结果集的并集",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "返回两个结果集的对称差集",
         "correct": false
+      },
+      {
+        "label": "C",
+        "text": "返回两个结果集的交集",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "返回第一个结果集中存在但第二个结果集中不存在的行",
+        "correct": true
       }
     ],
     "explanation": "EXCEPT返回在第一个SELECT结果中存在但在第二个SELECT结果中不存在的行，即差集运算。Oracle中使用MINUS实现相同功能。",
@@ -8220,22 +8220,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "创建临时表存储中间结果",
-        "correct": false
-      },
-      {
-        "label": "B",
         "text": "定义可复用的命名子查询",
         "correct": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "执行递归查询",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "创建索引",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "创建临时表存储中间结果",
         "correct": false
       }
     ],
@@ -8254,22 +8254,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "DISTINCT 和 UNION 完全无关",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "UNION 等价于对合并结果应用 DISTINCT",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "DISTINCT 只能用于UNION查询",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "UNION 不进行任何去重操作",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "DISTINCT 和 UNION 完全无关",
+        "text": "UNION 不进行任何去重操作",
         "correct": false
       }
     ],
@@ -8287,22 +8287,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "临时表不能存储数据",
+        "text": "临时表只在当前查询中有效",
         "correct": false
       },
       {
         "label": "B",
+        "text": "临时表不能存储数据",
+        "correct": false
+      },
+      {
+        "label": "C",
         "text": "CTE是逻辑定义，临时表是物理存储结构",
         "correct": true
       },
       {
-        "label": "C",
-        "text": "CTE可以创建索引",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "临时表只在当前查询中有效",
+        "text": "CTE可以创建索引",
         "correct": false
       }
     ],
@@ -8320,23 +8320,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "返回子查询中的所有行",
-        "correct": false
-      },
-      {
-        "label": "B",
-        "text": "返回 TRUE 或 FALSE",
-        "correct": true
-      },
-      {
-        "label": "C",
         "text": "返回子查询的行数",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "返回子查询第一行的值",
         "correct": false
+      },
+      {
+        "label": "C",
+        "text": "返回子查询中的所有行",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "返回 TRUE 或 FALSE",
+        "correct": true
       }
     ],
     "explanation": "EXISTS检查子查询是否返回行，返回TRUE或FALSE。子查询有结果则TRUE，无结果则FALSE。它不返回具体数据，只判断存在性。",
@@ -8386,22 +8386,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "使用UNION实现交集",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "使用IN子查询实现交集",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "使用NOT IN子查询实现交集",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "使用LEFT JOIN实现交集",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "使用UNION实现交集",
+        "text": "使用LEFT JOIN实现交集",
         "correct": false
       }
     ],
@@ -8419,22 +8419,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "1行: 1",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "2行: 1 和 1",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "空结果集",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "报错",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "1行: 1",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "2行: 1 和 1",
         "correct": false
       }
     ],
@@ -8452,23 +8452,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "1行",
-        "correct": false
-      },
-      {
-        "label": "B",
-        "text": "2行",
-        "correct": true
-      },
-      {
-        "label": "C",
         "text": "0行",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "3行",
         "correct": false
+      },
+      {
+        "label": "C",
+        "text": "1行",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "2行",
+        "correct": true
       }
     ],
     "explanation": "UNION ALL保留所有行，包括重复行。SELECT 'a'和SELECT 'b'各返回1行，合并后共2行。",
@@ -8485,22 +8485,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "{1,2,3,4}",
-        "correct": false
-      },
-      {
-        "label": "B",
         "text": "{2,3}",
         "correct": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "{1,4}",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "{1}",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "{1,2,3,4}",
         "correct": false
       }
     ],
@@ -8518,22 +8518,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "{1,2,3}",
-        "correct": false
-      },
-      {
-        "label": "B",
         "text": "{2,3}",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "{1}",
         "correct": true
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "{4}",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "{1,2,3}",
         "correct": false
       }
     ],
@@ -8551,22 +8551,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "n=1 的一行",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "空结果集",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "报错：cte不存在",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "n=NULL 的一行",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "n=1 的一行",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "空结果集",
         "correct": false
       }
     ],
@@ -8584,23 +8584,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "t1的所有行",
-        "correct": false
-      },
-      {
-        "label": "B",
-        "text": "空结果集",
-        "correct": true
-      },
-      {
-        "label": "C",
         "text": "报错",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "t1的第一行",
         "correct": false
+      },
+      {
+        "label": "C",
+        "text": "t1的所有行",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "空结果集",
+        "correct": true
       }
     ],
     "explanation": "EXISTS子查询SELECT 1 WHERE 1=2返回空集，因此EXISTS条件为FALSE，外部查询无行满足条件，返回空结果集。",
@@ -8618,22 +8618,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "1行",
-        "correct": false
-      },
-      {
-        "label": "B",
         "text": "2行",
         "correct": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "3行",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "0行",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "1行",
         "correct": false
       }
     ],
@@ -8651,22 +8651,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "空结果集",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "n=1 的一行",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "n=NULL 的一行",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "报错",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "空结果集",
+        "text": "报错",
         "correct": false
       }
     ],
@@ -8684,22 +8684,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "UNION",
+        "text": "UNION ALL",
         "correct": false
       },
       {
         "label": "B",
+        "text": "UNION",
+        "correct": false
+      },
+      {
+        "label": "C",
         "text": "INTERSECT",
         "correct": true
       },
       {
-        "label": "C",
-        "text": "EXCEPT",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "UNION ALL",
+        "text": "EXCEPT",
         "correct": false
       }
     ],
@@ -8717,23 +8717,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "递归成员返回空结果集",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "达到指定递归次数上限",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "锚点成员返回空结果集",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "外部查询终止",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "递归成员返回空结果集",
+        "correct": true
       }
     ],
     "explanation": "递归CTE在递归成员返回空结果集时终止，因为无新行产生意味着无法继续递归。虽然有些数据库也有递归深度限制，但逻辑终止条件是递归成员返回空集。",
@@ -8783,22 +8783,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "salary",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "dept_avg",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "emp",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "dept",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "salary",
+        "text": "dept",
         "correct": false
       }
     ],
@@ -8816,22 +8816,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "EXISTS",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "IN",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "NOT EXISTS",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "ANY",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "EXISTS",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "IN",
         "correct": false
       }
     ],
@@ -8849,23 +8849,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "UNION ALL",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "JOIN",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "INTERSECT",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "EXCEPT",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "UNION ALL",
+        "correct": true
       }
     ],
     "explanation": "UNION ALL合并两个查询的所有行。此处合并上下半年销售记录需要保留所有行。JOIN是连接操作，INTERSECT取交集，EXCEPT取差集。",
@@ -8915,22 +8915,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "SELECT缺少列",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "UNION两侧列数或数据类型不匹配可能导致逻辑错误",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "UNION语法错误",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "FROM子句错误",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "SELECT缺少列",
+        "text": "FROM子句错误",
         "correct": false
       }
     ],
@@ -8948,22 +8948,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "CTE定义缺少括号，应为WITH cte AS (SELECT ...)",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "CTE不能返回单行",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT * 不适用于CTE",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "AS关键字多余",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "CTE定义缺少括号，应为WITH cte AS (SELECT ...)",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "CTE不能返回单行",
         "correct": false
       }
     ],
@@ -8981,23 +8981,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "子查询引用了错误的表，应关联外部查询",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "EXISTS语法错误",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "SELECT * 不能用于EXISTS",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "缺少GROUP BY",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "子查询引用了错误的表，应关联外部查询",
+        "correct": true
       }
     ],
     "explanation": "子查询独立执行返回t1中所有行而非空集，EXISTS始终为TRUE，逻辑错误。正确做法是子查询关联外部表或引用不同表。EXISTS支持SELECT *。",
@@ -9047,22 +9047,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "临时表不支持SELECT *",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "源表不存在导致创建失败",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "TEMP关键字错误",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "AS关键字多余",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "临时表不支持SELECT *",
+        "text": "AS关键字多余",
         "correct": false
       }
     ],
@@ -9080,22 +9080,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "UNION ALL",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "UNION",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "JOIN",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "逗号",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "UNION ALL",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "UNION",
         "correct": false
       }
     ],
@@ -9114,23 +9114,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "EXISTS检查存在性，IN检查值匹配",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "EXISTS比IN慢",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "IN可以替代所有EXISTS场景",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "EXISTS只能用于子查询",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "EXISTS检查存在性，IN检查值匹配",
+        "correct": true
       }
     ],
     "explanation": "EXISTS判断子查询是否返回行(存在性)，IN判断值是否在集合中(匹配)。两者可互换但不完全等价：EXISTS不受NULL值影响，IN在NOT IN时有NULL陷阱。",
@@ -9181,22 +9181,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "CTE不需要查询优化器",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "CTE提高可读性且可被多次引用",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "CTE执行速度一定更快",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "CTE可以创建索引",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "CTE不需要查询优化器",
+        "text": "CTE可以创建索引",
         "correct": false
       }
     ],
@@ -9215,22 +9215,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "只能放在最后一个SELECT之后",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "每个SELECT都需要ORDER BY",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "放在第一个SELECT之后",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "放在WITH子句中",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "只能放在最后一个SELECT之后",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "每个SELECT都需要ORDER BY",
         "correct": false
       }
     ],
@@ -9248,23 +9248,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "1,2,3,4,5 共5行",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "1,2,3,4 共4行",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "仅1",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "1,2,3,4,5,6 共6行",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "1,2,3,4,5 共5行",
+        "correct": true
       }
     ],
     "explanation": "锚点返回n=1，递归从1开始每次加1直到n=5停止。WHILE n<5条件确保n=5时仍产生一行（n从4递增到5），所以结果为1到5共5行。",
@@ -9316,22 +9316,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "两个SELECT各自排序",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "整个UNION合并结果",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "仅第二个SELECT",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "仅第一个SELECT",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "两个SELECT各自排序",
+        "text": "仅第一个SELECT",
         "correct": false
       }
     ],
@@ -9350,22 +9350,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT id FROM A WHERE id NOT IN (SELECT id FROM B)",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT id FROM A WHERE id IN (SELECT id FROM B)",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT id FROM A INNER JOIN B ON A.id = B.id",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT id FROM A UNION SELECT id FROM B",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT id FROM A WHERE id NOT IN (SELECT id FROM B)",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT id FROM A WHERE id IN (SELECT id FROM B)",
         "correct": false
       }
     ],
@@ -9383,23 +9383,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "y=2 的一行",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "x=1 的一行",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "空结果集",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "报错",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "y=2 的一行",
+        "correct": true
       }
     ],
     "explanation": "CTE a返回x=1，CTE b从a中计算x+1得到y=2，外部查询从b中选取得到y=2的一行。",
@@ -9449,22 +9449,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "HAVING",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "EXISTS",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "IN",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "UNION",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "HAVING",
+        "text": "UNION",
         "correct": false
       }
     ],
@@ -9482,22 +9482,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "cte2",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "cte1",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "main",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "temp",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "cte2",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "cte1",
         "correct": false
       }
     ],
@@ -9516,23 +9516,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "UNION",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "UNION ALL",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "INTERSECT",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "JOIN",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "UNION",
+        "correct": true
       }
     ],
     "explanation": "UNION合并并去重，UNION ALL不去重，INTERSECT取交集，JOIN是连接操作。题目要求合并且去重所以用UNION。",
@@ -9582,22 +9582,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "LIMIT位置错误",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "缺少终止条件会导致无限递归",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "RECURSIVE关键字错误",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "SELECT * 语法错误",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "LIMIT位置错误",
+        "text": "SELECT * 语法错误",
         "correct": false
       }
     ],
@@ -9616,22 +9616,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "当dept存在活跃部门时NOT EXISTS逻辑反转",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "EXISTS语法错误",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "表名错误",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "列名错误",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "当dept存在活跃部门时NOT EXISTS逻辑反转",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "EXISTS语法错误",
         "correct": false
       }
     ],
@@ -9649,23 +9649,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "UNION两侧列数不匹配",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "UNION语法错误",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "id列不存在",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "FROM子句错误",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "UNION两侧列数不匹配",
+        "correct": true
       }
     ],
     "explanation": "UNION要求两侧列数相同。左侧1列右侧2列不匹配。这不是UNION语法错误而是列数不一致问题。",
@@ -9716,22 +9716,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "EXISTS语法错误",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "临时表为空，EXISTS子查询独立执行导致所有行满足",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "TEMP关键字错误",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "WHERE 1=0语法错误",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "EXISTS语法错误",
+        "text": "WHERE 1=0语法错误",
         "correct": false
       }
     ],
@@ -9750,22 +9750,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "UNION会去重导致递归中间结果丢失",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "UNION ALL性能更好",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "UNION不支持递归",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "UNION ALL自动终止递归",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "UNION会去重导致递归中间结果丢失",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "UNION ALL性能更好",
         "correct": false
       }
     ],
@@ -9784,23 +9784,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "子查询结果集较大且外部表较小时",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "子查询结果集为空时",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "只需要判断存在性以外的场景",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "IN和EXISTS完全等价",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "子查询结果集较大且外部表较小时",
+        "correct": true
       }
     ],
     "explanation": "EXISTS适合子查询大外部小的场景，因为EXISTS找到匹配即停。子查询为空时两者等价，EXISTS不仅判断存在性还支持关联条件，两者不完全等价。",
@@ -9851,22 +9851,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "1,2 共2行",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "1,2,4,8,16 共5行",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "1,2,4,8 共4行",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "1,2,4,8,16,32 共6行",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "1,2 共2行",
+        "text": "1,2,4,8,16,32 共6行",
         "correct": false
       }
     ],
@@ -9885,22 +9885,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "A EXCEPT B（基于id列）",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "A INTERSECT B",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "A UNION B",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "A JOIN B",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "A EXCEPT B（基于id列）",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "A INTERSECT B",
         "correct": false
       }
     ],
@@ -9919,23 +9919,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "1,2,11,12 共4行",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "1,2 共2行",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "11,12 共2行",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "1,2,11,12,13 共5行",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "1,2,11,12 共4行",
+        "correct": true
       }
     ],
     "explanation": "CTE a返回1和2，CTE b计算v+10得到11和12。UNION ALL合并a和b的结果：1,2,11,12共4行。",
@@ -9986,22 +9986,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "IN",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "NOT EXISTS",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "EXISTS",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "NOT IN",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "IN",
+        "text": "NOT IN",
         "correct": false
       }
     ],
@@ -10020,22 +10020,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "递归CTE结果不能直接INSERT，需先存入临时表再INSERT",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "UNION ALL应改为UNION",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "WHERE条件错误",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "CTE不能递归",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "递归CTE结果不能直接INSERT，需先存入临时表再INSERT",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "UNION ALL应改为UNION",
         "correct": false
       }
     ],
@@ -10055,23 +10055,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "UNION ALL不去重，外层DISTINCT后等价于UNION；若A内部有重复则结果不同",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "两者完全相同",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "DISTINCT不影响结果",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "UNION ALL比UNION多排序",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "UNION ALL不去重，外层DISTINCT后等价于UNION；若A内部有重复则结果不同",
+        "correct": true
       }
     ],
     "explanation": "当A表内部有重复name时，UNION ALL保留重复，外层DISTINCT再去重，但A内部重复行与B中同值行处理方式不同于UNION。UNION是对两个结果集去重后合并。",
@@ -10121,22 +10121,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "返回两个表的并集",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "返回左表所有行，右表无匹配时填NULL",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "只返回右表有匹配的行",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "返回两个表的交集",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "返回两个表的并集",
+        "text": "返回两个表的交集",
         "correct": false
       }
     ],
@@ -10154,22 +10154,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "RIGHT JOIN 等价于交换表顺序的 LEFT JOIN",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "RIGHT JOIN 只能用于三表以上查询",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "RIGHT JOIN 不需要 ON 条件",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "RIGHT JOIN 只返回右表独有的行",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "RIGHT JOIN 等价于交换表顺序的 LEFT JOIN",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "RIGHT JOIN 只能用于三表以上查询",
         "correct": false
       }
     ],
@@ -10187,23 +10187,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "左表行数乘以右表行数",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "左表行数加右表行数",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "两个表行数的最大值",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "取决于 ON 条件",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "左表行数乘以右表行数",
+        "correct": true
       }
     ],
     "explanation": "CROSS JOIN 产生笛卡尔积，行数=左表行数x右表行数，不需要 ON 条件。",
@@ -10254,22 +10254,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "只能连接两个不同的列",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "一张表与自己进行连接",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "只能使用 LEFT JOIN",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "不需要表别名",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "只能连接两个不同的列",
+        "text": "不需要表别名",
         "correct": false
       }
     ],
@@ -10287,22 +10287,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "左右表所有行，无匹配时填NULL",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "只返回左表所有行",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "只返回两个表都有匹配的行",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "只返回无匹配的行",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "左右表所有行，无匹配时填NULL",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "只返回左表所有行",
         "correct": false
       }
     ],
@@ -10320,23 +10320,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT * FROM a INNER JOIN b ON a.id = b.aid",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "SELECT * FROM a INNER JOIN b WHERE a.id = b.aid",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "SELECT * FROM a AND b ON a.id = b.aid",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "SELECT * FROM a JOIN b SET a.id = b.aid",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "SELECT * FROM a INNER JOIN b ON a.id = b.aid",
+        "correct": true
       }
     ],
     "explanation": "INNER JOIN 使用 ON 指定连接条件。B 应用 ON 非 WHERE。C 语法错误。D 中 SET 用于 UPDATE。",
@@ -10386,22 +10386,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "RIGHT JOIN",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "CROSS JOIN",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "INNER JOIN",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "LEFT JOIN",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "RIGHT JOIN",
+        "text": "LEFT JOIN",
         "correct": false
       }
     ],
@@ -10419,22 +10419,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "INNER JOIN",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "LEFT JOIN",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "GROUP BY",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "WHERE",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "INNER JOIN",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "LEFT JOIN",
         "correct": false
       }
     ],
@@ -10452,23 +10452,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "LEFT JOIN",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "INNER JOIN",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "RIGHT JOIN",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "CROSS JOIN",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "LEFT JOIN",
+        "correct": true
       }
     ],
     "explanation": "LEFT JOIN 保留所有学生含未选课的。INNER JOIN 会排除未选课学生。",
@@ -10518,22 +10518,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "4",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "12",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "7",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "3",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "4",
+        "text": "3",
         "correct": false
       }
     ],
@@ -10551,22 +10551,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "5",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "3",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "8",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "15",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "5",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "3",
         "correct": false
       }
     ],
@@ -10584,23 +10584,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "2",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "3",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "1",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "6",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "2",
+        "correct": true
       }
     ],
     "explanation": "只有 id=2 和 3 同时存在于两表，INNER JOIN 返回 2 行。",
@@ -10650,22 +10650,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "SELECT 列名错误",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "WHERE 应改为 ON",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "LEFT JOIN 应改为 INNER JOIN",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "不能用表别名",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "SELECT 列名错误",
+        "text": "不能用表别名",
         "correct": false
       }
     ],
@@ -10684,22 +10684,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "提高查询执行速度",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "简化SQL书写",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "避免列名歧义",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "使SQL更易读",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "提高查询执行速度",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "简化SQL书写",
         "correct": false
       }
     ],
@@ -10717,23 +10717,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT * FROM a, b WHERE a.id = b.aid",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "SELECT * FROM a INNER JOIN b",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "SELECT * FROM a LEFT JOIN b ON a.id = b.aid",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "SELECT * FROM a CROSS JOIN b",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "SELECT * FROM a, b WHERE a.id = b.aid",
+        "correct": true
       }
     ],
     "explanation": "隐式内连接用 FROM a,b WHERE 形式。显式用 INNER JOIN ON。",
@@ -10784,22 +10784,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "SELF JOIN",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "INNER JOIN",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "RIGHT JOIN",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "CROSS JOIN",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "SELF JOIN",
+        "text": "CROSS JOIN",
         "correct": false
       }
     ],
@@ -10817,22 +10817,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "1",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "6",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "2",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "3",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "1",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "6",
         "correct": false
       }
     ],
@@ -10850,23 +10850,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "name 列可能存在于两个表中需指定表名",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "JOIN 语法错误",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "ON 条件多余",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "不能用 dept_id 连接",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "name 列可能存在于两个表中需指定表名",
+        "correct": true
       }
     ],
     "explanation": "如果两表都有 name 列，SELECT name 会歧义，需写成 emp.name。",
@@ -10916,22 +10916,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "需要安装插件",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "不直接支持，可用 UNION 模拟",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "完全支持",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "只支持 INNER JOIN 和 LEFT JOIN",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "需要安装插件",
+        "text": "只支持 INNER JOIN 和 LEFT JOIN",
         "correct": false
       }
     ],
@@ -10949,22 +10949,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "RIGHT JOIN",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "LEFT JOIN",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "INNER JOIN",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "CROSS JOIN",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "RIGHT JOIN",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "LEFT JOIN",
         "correct": false
       }
     ],
@@ -10982,23 +10982,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "使用表名或别名限定列名",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "只能用星号查询",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "给列取不同名字",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "删除同名列",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "使用表名或别名限定列名",
+        "correct": true
       }
     ],
     "explanation": "同名列必须用 表名.列名 或 别名.列名 指定来源。",
@@ -11049,22 +11049,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "0",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "2",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "5",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "3",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "0",
+        "text": "3",
         "correct": false
       }
     ],
@@ -11083,22 +11083,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "LEFT JOIN",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "INNER JOIN",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "RIGHT JOIN",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "CROSS JOIN",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "LEFT JOIN",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "INNER JOIN",
         "correct": false
       }
     ],
@@ -11117,23 +11117,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "ON 中过滤不影响左表行数，WHERE 中过滤会排除左表行",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "两者完全等价",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "WHERE 先于 ON 执行",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "ON 不能用于过滤右表列",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "ON 中过滤不影响左表行数，WHERE 中过滤会排除左表行",
+        "correct": true
       }
     ],
     "explanation": "在 LEFT JOIN 中，ON 条件过滤右表但不影响左表行数。WHERE 在连接后过滤，会排除左表不满足条件的行。",
@@ -11183,22 +11183,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "不能用 LIKE",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "WHERE 条件会把无部门员工过滤掉，应改为 AND 放在 ON 后",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "LEFT JOIN 应改为 INNER JOIN",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "ON 条件写反了",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "不能用 LIKE",
+        "text": "ON 条件写反了",
         "correct": false
       }
     ],
@@ -11217,22 +11217,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "先连接 A 和 B，结果再与 C 连接",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "三个表同时连接",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "先连接 B 和 C，再与 A 连接",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "随机顺序连接",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "先连接 A 和 B，结果再与 C 连接",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "三个表同时连接",
         "correct": false
       }
     ],
@@ -11251,23 +11251,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "LEFT JOIN",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "INNER JOIN",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "RIGHT JOIN",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "FULL JOIN",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "LEFT JOIN",
+        "correct": true
       }
     ],
     "explanation": "第一个 LEFT JOIN 保留所有员工。如果用 INNER JOIN，无部门的员工会被排除。",
@@ -11319,22 +11319,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "替代 SELECT 子句",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "简化两表同名列的连接条件",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "指定查询使用的索引",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "创建临时表",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "替代 SELECT 子句",
+        "text": "创建临时表",
         "correct": false
       }
     ],
@@ -11352,22 +11352,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "AND 条件应放 WHERE 中而非 ON 中（对 INNER JOIN 虽然结果相同但语义不清）",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "JOIN 必须写明 INNER JOIN",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "ON 中不能有多个条件",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "salary 不能用在连接条件中",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "AND 条件应放 WHERE 中而非 ON 中（对 INNER JOIN 虽然结果相同但语义不清）",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "JOIN 必须写明 INNER JOIN",
         "correct": false
       }
     ],
@@ -11386,23 +11386,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "3",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "10",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "5",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "1",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "3",
+        "correct": true
       }
     ],
     "explanation": "LEFT JOIN 产生 10 行，dept_id=1 的有 3 行，COUNT(*)=3。",
@@ -11453,22 +11453,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "UNION",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "JOIN",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "LEFT JOIN",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "CROSS JOIN",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "UNION",
+        "text": "CROSS JOIN",
         "correct": false
       }
     ],
@@ -11487,22 +11487,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "NULL 不等于任何值（包括 NULL），这些行不会被匹配",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "NULL 与 NULL 会被匹配",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "NULL 行会被排除在结果之外",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "会报错",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "NULL 不等于任何值（包括 NULL），这些行不会被匹配",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "NULL 与 NULL 会被匹配",
         "correct": false
       }
     ],
@@ -11520,23 +11520,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "COUNT(*) 应改为 COUNT(e.id)，否则空部门会计为1",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "RIGHT JOIN 应改为 LEFT JOIN",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "GROUP BY 错误",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "不能对连接结果用 COUNT",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "COUNT(*) 应改为 COUNT(e.id)，否则空部门会计为1",
+        "correct": true
       }
     ],
     "explanation": "COUNT(*) 计算行数，空部门有 1 行（右表行+左表NULL），COUNT(e.id) 只计非 NULL 值，空部门为 0。",
@@ -11588,22 +11588,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "15",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "3",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "2",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "5",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "15",
+        "text": "5",
         "correct": false
       }
     ],
@@ -11621,22 +11621,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "IS NOT NULL 应改为 IS NULL",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "LEFT JOIN 应改为 INNER JOIN",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "ON 条件错误",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "不能用 LEFT JOIN 查找未匹配行",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "IS NOT NULL 应改为 IS NULL",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "LEFT JOIN 应改为 INNER JOIN",
         "correct": false
       }
     ],
@@ -11656,23 +11656,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "40",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "100",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "20",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "60",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "40",
+        "correct": true
       }
     ],
     "explanation": "WHERE 在 LEFT JOIN 之后执行，过滤掉不满足条件的行（包括无订单客户因为 NULL 不满足日期条件），剩 40 行。",
@@ -11724,22 +11724,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "2",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "5",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "6",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "3",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "2",
+        "text": "3",
         "correct": false
       }
     ],
@@ -11758,22 +11758,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "在连接列上不建索引，让优化器自动选择",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "在连接列上创建索引",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "先过滤再连接（减少参与连接的行数）",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "选择合适的连接类型避免不必要的数据",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "在连接列上不建索引，让优化器自动选择",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "在连接列上创建索引",
         "correct": false
       }
     ],
@@ -11791,23 +11791,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "UNION",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "UNION ALL",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "INTERSECT",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "EXCEPT",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "UNION",
+        "correct": true
       }
     ],
     "explanation": "UNION 合并 LEFT JOIN 和 RIGHT JOIN 结果并去重，模拟 FULL OUTER JOIN。UNION ALL 不去重会产生重复行。",
@@ -11860,22 +11860,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "SUM 不能用于连接查询",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "没有问题，SUM(NULL) 自动返回 NULL，如果需要显示0应用 COALESCE",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "GROUP BY 错误",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "LEFT JOIN 应改为 INNER JOIN",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "SUM 不能用于连接查询",
+        "text": "LEFT JOIN 应改为 INNER JOIN",
         "correct": false
       }
     ],
@@ -11894,22 +11894,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "JOIN 时 ON 条件写错导致所有行都匹配",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "使用 INNER JOIN 并指定正确 ON 条件",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "使用 LEFT JOIN 并指定正确 ON 条件",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "使用子查询替代连接",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "JOIN 时 ON 条件写错导致所有行都匹配",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "使用 INNER JOIN 并指定正确 ON 条件",
         "correct": false
       }
     ],
@@ -11928,23 +11928,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "2次",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "1次",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "3次",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "不需要自连接",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "2次",
+        "correct": true
       }
     ],
     "explanation": "A-B、B-C、C-D 三段路径需要 2 次自连接（r1 JOIN r2 ON r1.to=r2.from JOIN r3 ON r2.to=r3.from）来拼出完整路线。",
@@ -11996,22 +11996,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "只返回左表行",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "自动按两表所有同名列进行连接",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "只能连接数字列",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "需要指定 ON 条件",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "只返回左表行",
+        "text": "需要指定 ON 条件",
         "correct": false
       }
     ],
@@ -12030,22 +12030,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "COALESCE",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "ISNULL",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "IFNULL",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "NVL",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "COALESCE",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "ISNULL",
         "correct": false
       }
     ],
@@ -12064,23 +12064,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "2",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "3",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "4",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "1",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "2",
+        "correct": true
       }
     ],
     "explanation": "INNER JOIN 匹配 id=1(2行) 和 id=2(1行) 共3行，DISTINCT a.id 去重后剩2行（id=1和id=2）。",
@@ -12097,22 +12097,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "IN 子查询只能返回单列单行的结果",
-        "correct": false
-      },
-      {
-        "label": "B",
         "text": "IN 子查询可以返回单列多行的结果",
         "correct": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "IN 子查询必须返回至少两列",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "IN 子查询不能与 WHERE 子句一起使用",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "IN 子查询只能返回单列单行的结果",
         "correct": false
       }
     ],
@@ -12163,22 +12163,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "返回子查询结果集中的所有行",
+        "text": "删除子查询中满足条件的行",
         "correct": false
       },
       {
         "label": "B",
+        "text": "返回子查询结果集中的所有行",
+        "correct": false
+      },
+      {
+        "label": "C",
         "text": "判断子查询是否返回至少一行数据",
         "correct": true
       },
       {
-        "label": "C",
-        "text": "返回子查询中第一个值",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "删除子查询中满足条件的行",
+        "text": "返回子查询中第一个值",
         "correct": false
       }
     ],
@@ -12196,23 +12196,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "NOT EXISTS 不支持子查询",
-        "correct": false
-      },
-      {
-        "label": "B",
-        "text": "NOT EXISTS 不受子查询结果中 NULL 值的影响",
-        "correct": true
-      },
-      {
-        "label": "C",
         "text": "NOT IN 总是比 NOT EXISTS 快",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "两者完全等价，没有区别",
         "correct": false
+      },
+      {
+        "label": "C",
+        "text": "NOT EXISTS 不支持子查询",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "NOT EXISTS 不受子查询结果中 NULL 值的影响",
+        "correct": true
       }
     ],
     "explanation": "NOT EXISTS 不受子查询结果中 NULL 值的影响，而 NOT IN 在子查询结果含 NULL 时会产生三值逻辑问题。选项A错误，NOT EXISTS本身就使用子查询；选项C错误，性能取决于具体场景；选项D错误，两者在NULL处理上有本质区别。",
@@ -12229,22 +12229,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "返回多行多列的结果",
-        "correct": false
-      },
-      {
-        "label": "B",
         "text": "返回恰好一行一列的结果",
         "correct": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "不能用在 SELECT 子句中",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "必须与 GROUP BY 一起使用",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "返回多行多列的结果",
         "correct": false
       }
     ],
@@ -12295,22 +12295,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "必须使用 ORDER BY 子句",
+        "text": "不能与其他表 JOIN",
         "correct": false
       },
       {
         "label": "B",
+        "text": "必须使用 ORDER BY 子句",
+        "correct": false
+      },
+      {
+        "label": "C",
         "text": "必须为派生表指定别名",
         "correct": true
       },
       {
-        "label": "C",
-        "text": "必须返回单行单列",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "不能与其他表 JOIN",
+        "text": "必须返回单行单列",
         "correct": false
       }
     ],
@@ -12328,23 +12328,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "CTE 不能重复使用，只能引用一次",
-        "correct": false
-      },
-      {
-        "label": "B",
-        "text": "CTE 可以提高复杂查询的可读性",
-        "correct": true
-      },
-      {
-        "label": "C",
         "text": "CTE 必须在 INSERT 语句中使用",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "CTE 不能包含多个定义",
         "correct": false
+      },
+      {
+        "label": "C",
+        "text": "CTE 不能重复使用，只能引用一次",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "CTE 可以提高复杂查询的可读性",
+        "correct": true
       }
     ],
     "explanation": "CTE（Common Table Expression）可以提高复杂查询的可读性，将子查询提取为命名临时结果集。选项A错误，CTE可以多次引用；选项C错误，CTE用于SELECT等多种语句；选项D错误，CTE可以包含多个定义（用逗号分隔）。",
@@ -12361,22 +12361,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "子查询总是比 JOIN 慢",
-        "correct": false
-      },
-      {
-        "label": "B",
         "text": "JOIN 可以在结果中显示关联表的数据，子查询只用于条件过滤",
         "correct": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "子查询和 JOIN 完全等价",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "JOIN 不能用于过滤数据",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "子查询总是比 JOIN 慢",
         "correct": false
       }
     ],
@@ -12427,22 +12427,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "所有员工的姓名",
+        "text": "departments 表中所有部门名称",
         "correct": false
       },
       {
         "label": "B",
+        "text": "所有员工的姓名",
+        "correct": false
+      },
+      {
+        "label": "C",
         "text": "Sales 部门员工的姓名",
         "correct": true
       },
       {
-        "label": "C",
-        "text": "非 Sales 部门员工的姓名",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "departments 表中所有部门名称",
+        "text": "非 Sales 部门员工的姓名",
         "correct": false
       }
     ],
@@ -12460,23 +12460,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "选修 Math 课程的学生",
-        "correct": false
-      },
-      {
-        "label": "B",
-        "text": "未选修 Math 课程的学生",
-        "correct": true
-      },
-      {
-        "label": "C",
         "text": "所有学生",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "没有任何学生的姓名",
         "correct": false
+      },
+      {
+        "label": "C",
+        "text": "选修 Math 课程的学生",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "未选修 Math 课程的学生",
+        "correct": true
       }
     ],
     "explanation": "NOT IN子查询排除选修Math课程的学生，返回未选修Math的学生。选项A是IN的结果；选项C包含了选修Math的学生；选项D与查询目的不符。",
@@ -12493,22 +12493,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "没有下过订单的客户姓名",
-        "correct": false
-      },
-      {
-        "label": "B",
         "text": "下过订单的客户姓名",
         "correct": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "所有客户姓名",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "所有订单金额",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "没有下过订单的客户姓名",
         "correct": false
       }
     ],
@@ -12559,22 +12559,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "有员工的部门名称",
+        "text": "员工姓名",
         "correct": false
       },
       {
         "label": "B",
+        "text": "有员工的部门名称",
+        "correct": false
+      },
+      {
+        "label": "C",
         "text": "没有员工的部门名称",
         "correct": true
       },
       {
-        "label": "C",
-        "text": "所有部门名称",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "员工姓名",
+        "text": "所有部门名称",
         "correct": false
       }
     ],
@@ -12592,23 +12592,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "IN",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "NOT IN",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "EXISTS",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "HAVING",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "IN",
+        "correct": true
       }
     ],
     "explanation": "IN用于判断值是否在子查询结果集中。选项B会排除选修C01的学生；选项C的EXISTS语法不适用于此处；选项D是分组过滤关键字。",
@@ -12625,22 +12625,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "IN",
-        "correct": false
-      },
-      {
-        "label": "B",
         "text": "EXISTS",
         "correct": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "NOT IN",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "HAVING",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "IN",
         "correct": false
       }
     ],
@@ -12724,23 +12724,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "WITH",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "FROM",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "HAVING",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "CREATE",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "WITH",
+        "correct": true
       }
     ],
     "explanation": "WITH关键字用于定义CTE。选项B的FROM是查询数据源关键字；选项C是分组过滤关键字；选项D是创建对象的DDL关键字。",
@@ -12790,22 +12790,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "name 列不允许 NULL",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "NOT IN 子查询结果中可能包含 NULL",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "NOT IN 语法错误",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "students 表不存在",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "name 列不允许 NULL",
+        "text": "students 表不存在",
         "correct": false
       }
     ],
@@ -12823,23 +12823,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "EXISTS 子查询使用了 SELECT * 而非 SELECT 1",
-        "correct": false
-      },
-      {
-        "label": "B",
         "text": "EXISTS 不能用于相关子查询",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "EXISTS 子查询缺少关联条件",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "此查询没有问题",
         "correct": true
+      },
+      {
+        "label": "D",
+        "text": "EXISTS 子查询使用了 SELECT * 而非 SELECT 1",
+        "correct": false
       }
     ],
     "explanation": "该查询语法和逻辑都正确。EXISTS可以用SELECT *或SELECT 1，效果相同。选项A不影响EXISTS的判断结果；选项B错误，EXISTS常用于相关子查询；选项C该查询有正确的关联条件。",
@@ -12856,23 +12856,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "派生表缺少别名",
-        "correct": false
-      },
-      {
-        "label": "B",
-        "text": "此查询没有问题",
-        "correct": true
-      },
-      {
-        "label": "C",
         "text": "派生表不能使用 SELECT",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "必须使用 ORDER BY",
         "correct": false
+      },
+      {
+        "label": "C",
+        "text": "派生表缺少别名",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "此查询没有问题",
+        "correct": true
       }
     ],
     "explanation": "该查询语法正确，派生表已有别名t。选项A错误，已有别名；选项C错误，派生表本身就是SELECT；选项D错误，ORDER BY不是必须的。",
@@ -12889,22 +12889,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "正常返回结果",
-        "correct": false
-      },
-      {
-        "label": "B",
         "text": "返回错误，因为子查询返回多行但使用了等号比较",
         "correct": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "只返回第一行",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "自动使用 IN 代替",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "正常返回结果",
         "correct": false
       }
     ],
@@ -12955,22 +12955,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "UNION ALL 和递归成员",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "ORDER BY 子句",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "GROUP BY 子句",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "HAVING 子句",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "UNION ALL 和递归成员",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "ORDER BY 子句",
         "correct": false
       }
     ],
@@ -12988,23 +12988,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "需要显示两个表的列",
-        "correct": false
-      },
-      {
-        "label": "B",
-        "text": "需要检查某条件是否存在（EXISTS）",
-        "correct": true
-      },
-      {
-        "label": "C",
         "text": "需要返回两个表的笛卡尔积",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "需要显示所有外键匹配的行",
         "correct": false
+      },
+      {
+        "label": "C",
+        "text": "需要显示两个表的列",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "需要检查某条件是否存在（EXISTS）",
+        "correct": true
       }
     ],
     "explanation": "EXISTS子查询适合检查条件是否存在，语义清晰。选项A适合用JOIN；选项C用CROSS JOIN；选项D适合用JOIN。",
@@ -13021,22 +13021,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "相关子查询",
-        "correct": false
-      },
-      {
-        "label": "B",
         "text": "非相关子查询",
         "correct": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "嵌套三层以上的子查询",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "返回大量数据的子查询",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "相关子查询",
         "correct": false
       }
     ],
@@ -13087,22 +13087,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "正常返回所有不在列表中的行",
+        "text": "报错",
         "correct": false
       },
       {
         "label": "B",
+        "text": "正常返回所有不在列表中的行",
+        "correct": false
+      },
+      {
+        "label": "C",
         "text": "不返回任何行，因为与 NULL 比较结果为 UNKNOWN",
         "correct": true
       },
       {
-        "label": "C",
-        "text": "自动忽略 NULL 值",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "报错",
+        "text": "自动忽略 NULL 值",
         "correct": false
       }
     ],
@@ -13120,23 +13120,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "CTE 可以被多次引用，派生表只能在其定义位置使用",
+        "text": "两者完全相同",
         "correct": false
       },
       {
         "label": "B",
-        "text": "派生表可以被多次引用，CTE 只能引用一次",
+        "text": "CTE 可以被多次引用，派生表只能在其定义位置使用",
         "correct": false
       },
       {
         "label": "C",
-        "text": "CTE 可以被多次引用且提高可读性，派生表嵌套在 FROM 中",
-        "correct": true
+        "text": "派生表可以被多次引用，CTE 只能引用一次",
+        "correct": false
       },
       {
         "label": "D",
-        "text": "两者完全相同",
-        "correct": false
+        "text": "CTE 可以被多次引用且提高可读性，派生表嵌套在 FROM 中",
+        "correct": true
       }
     ],
     "explanation": "CTE可以被多次引用且结构清晰，派生表嵌套在FROM子句中。选项A说法反了；选项B说法反了；选项D错误，两者结构不同。",
@@ -13153,22 +13153,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "工资高于全公司平均的员工",
-        "correct": false
-      },
-      {
-        "label": "B",
         "text": "工资高于本部门平均的员工",
         "correct": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "工资最高的员工",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "所有员工",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "工资高于全公司平均的员工",
         "correct": false
       }
     ],
@@ -13186,22 +13186,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "没有出版过书的作者",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "2000年后出版过书的作者",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "2000年前出版过书的作者",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "所有作者",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "没有出版过书的作者",
+        "text": "所有作者",
         "correct": false
       }
     ],
@@ -13219,22 +13219,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "有订单的客户",
+        "text": "订单数量最多的客户",
         "correct": false
       },
       {
         "label": "B",
+        "text": "有订单的客户",
+        "correct": false
+      },
+      {
+        "label": "C",
         "text": "没有订单的客户",
         "correct": true
       },
       {
-        "label": "C",
-        "text": "所有客户",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "订单数量最多的客户",
+        "text": "所有客户",
         "correct": false
       }
     ],
@@ -13252,23 +13252,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "销售额超过1000的产品ID",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "销售额等于1000的产品ID",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "所有产品ID",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "销售次数超过1000的产品ID",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "销售额超过1000的产品ID",
+        "correct": true
       }
     ],
     "explanation": "CTE按产品分组计算总销售额，外部查询筛选超过1000的产品。选项B条件不符；选项C缺少过滤；选项D混淆了金额和次数。",
@@ -13285,22 +13285,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "所有成绩为A的学生",
-        "correct": false
-      },
-      {
-        "label": "B",
         "text": "荣誉学生中成绩为A的学生",
         "correct": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "所有荣誉学生",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "成绩为A但非荣誉学生",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "所有成绩为A的学生",
         "correct": false
       }
     ],
@@ -13384,23 +13384,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "t",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "WHERE",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "GROUP BY",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "HAVING",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "t",
+        "correct": true
       }
     ],
     "explanation": "派生表必须有别名t。选项B、C、D都是SQL关键字而非别名。",
@@ -13450,22 +13450,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "category_id 列不存在",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "NOT IN 子查询结果中 category_id 包含 NULL",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "products 表为空",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "语法错误",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "category_id 列不存在",
+        "text": "语法错误",
         "correct": false
       }
     ],
@@ -13483,22 +13483,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "CTE 定义中缺少 GROUP BY",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "WITH 语法错误",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "avg_sal 别名错误",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT * 不能用于 CTE",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "CTE 定义中缺少 GROUP BY",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "WITH 语法错误",
         "correct": false
       }
     ],
@@ -13516,23 +13516,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "派生表缺少别名",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "ORDER BY 在子查询中不能使用",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "salary 列不存在",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "WHERE 子句位置错误",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "派生表缺少别名",
+        "correct": true
       }
     ],
     "explanation": "派生表必须指定别名，如添加 AS t。选项B的ORDER BY在子查询中可以使用；选项C的salary列存在；选项D的WHERE子句位置正确。",
@@ -13617,22 +13617,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "增加更多子查询",
+        "text": "使用 ORDER BY 优化",
         "correct": false
       },
       {
         "label": "B",
+        "text": "增加更多子查询",
+        "correct": false
+      },
+      {
+        "label": "C",
         "text": "将相关子查询改写为 JOIN",
         "correct": true
       },
       {
-        "label": "C",
-        "text": "删除 WHERE 子句",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "使用 ORDER BY 优化",
+        "text": "删除 WHERE 子句",
         "correct": false
       }
     ],
@@ -13651,23 +13651,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "递归成员返回空结果集时终止",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "执行超过10次后终止",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "遇到 NULL 值时终止",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "遇到错误时终止",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "递归成员返回空结果集时终止",
+        "correct": true
       }
     ],
     "explanation": "递归CTE在递归成员返回空结果集时终止递归。选项B没有固定次数限制；选项C不是NULL导致的终止；选项D不是错误导致的终止。",
@@ -13719,22 +13719,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "没有下过订单的客户",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "每个客户的订单总额",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "所有订单的总额",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "每个客户的平均订单金额",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "没有下过订单的客户",
+        "text": "每个客户的平均订单金额",
         "correct": false
       }
     ],
@@ -13753,22 +13753,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "e.dept_id",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "e2.dept_id",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "e.id",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "e.salary",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "e.dept_id",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "e2.dept_id",
         "correct": false
       }
     ],
@@ -13786,23 +13786,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "LIMIT",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "TOP",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "FETCH",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "COUNT",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "LIMIT",
+        "correct": true
       }
     ],
     "explanation": "LIMIT用于限制返回行数。选项B的TOP是SQL Server语法；选项C的FETCH需要配合OFFSET使用；选项D是计数函数不是限制行数。",
@@ -13854,22 +13854,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "IS NOT NULL 语法错误",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "相关子查询对外部每一行执行，大表时性能差",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "AND 条件太多",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "AVG 函数计算错误",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "IS NOT NULL 语法错误",
+        "text": "AVG 函数计算错误",
         "correct": false
       }
     ],
@@ -13888,22 +13888,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "在子查询中添加 AND dept_id IS NOT NULL",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "删除 WHERE 子句",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "使用 ORDER BY",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "添加 GROUP BY",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "在子查询中添加 AND dept_id IS NOT NULL",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "删除 WHERE 子句",
         "correct": false
       }
     ],
@@ -13921,23 +13921,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "IN",
-        "correct": false
-      },
-      {
-        "label": "B",
-        "text": "NOT IN",
-        "correct": true
-      },
-      {
-        "label": "C",
         "text": "EXISTS",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "JOIN",
         "correct": false
+      },
+      {
+        "label": "C",
+        "text": "IN",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "NOT IN",
+        "correct": true
       }
     ],
     "explanation": "NOT IN用于排除子查询结果集中的值。选项A的IN是包含而非排除；选项C的EXISTS是存在性判断；选项D的JOIN是连接操作而非排除。",
@@ -13954,22 +13954,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "订单总数",
-        "correct": false
-      },
-      {
-        "label": "B",
         "text": "金额超过平均值的订单数量",
         "correct": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "平均订单金额",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "最高订单金额",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "订单总数",
         "correct": false
       }
     ],
@@ -13987,22 +13987,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "LIMIT 限制",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "别名（如 t 或 dept_avg）",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "WHERE 条件",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "ORDER BY 子句",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "LIMIT 限制",
+        "text": "ORDER BY 子句",
         "correct": false
       }
     ],
@@ -14020,22 +14020,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "CTE 定义中的子查询缺少括号",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "GROUP BY 语法错误",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "COUNT(*) 不能在 CTE 中使用",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT * 不允许用于 CTE",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "CTE 定义中的子查询缺少括号",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "GROUP BY 语法错误",
         "correct": false
       }
     ],
@@ -14053,23 +14053,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "需要返回两个表的所有列",
-        "correct": false
-      },
-      {
-        "label": "B",
-        "text": "只需要根据另一个表的数据过滤结果",
-        "correct": true
-      },
-      {
-        "label": "C",
         "text": "需要更新两个表的数据",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "需要计算笛卡尔积",
         "correct": false
+      },
+      {
+        "label": "C",
+        "text": "需要返回两个表的所有列",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "只需要根据另一个表的数据过滤结果",
+        "correct": true
       }
     ],
     "explanation": "当只需要根据另一个表的数据过滤结果时，子查询语义清晰且简洁。选项A适合用JOIN；选项C是UPDATE语句的用法；选项D是CROSS JOIN。",
@@ -14152,22 +14152,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "DENSE_RANK() 返回的排名是连续的，不跳号",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "DENSE_RANK() 不处理并列排名",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "DENSE_RANK() 需要 PARTITION BY 才能使用",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "DENSE_RANK() 的结果与 ROW_NUMBER() 完全相同",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "DENSE_RANK() 返回的排名是连续的，不跳号",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "DENSE_RANK() 不处理并列排名",
         "correct": false
       }
     ],
@@ -14185,23 +14185,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "将结果集分为4个分区，每行分配其所在分区的编号",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "返回每行在第4列的值",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "将结果集的前4行标记为特殊组",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "计算每4行的移动平均值",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "将结果集分为4个分区，每行分配其所在分区的编号",
+        "correct": true
       }
     ],
     "explanation": "NTILE(N) 将结果集分为N个组（桶），为每行分配其所在组的编号（1到N）。B描述错误，NTILE不涉及列号。C描述不准确，NTILE是均匀分组而非只标记前N行。D描述的是移动平均，不是NTILE的功能。",
@@ -14218,22 +14218,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "返回分区中最后一行的值",
-        "correct": false
-      },
-      {
-        "label": "B",
         "text": "返回当前行之前某一行的值",
         "correct": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "返回当前行之后某一行的值",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "返回当前行的排名值",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "返回分区中最后一行的值",
         "correct": false
       }
     ],
@@ -14284,22 +14284,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "返回分区中按指定排序的第一行的值",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "返回表中物理存储的第一行",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "返回当前行前一行的值",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "返回分组中最小的值",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "返回分区中按指定排序的第一行的值",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "返回表中物理存储的第一行",
         "correct": false
       }
     ],
@@ -14317,23 +14317,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "必须配合 PARTITION BY 使用",
-        "correct": false
-      },
-      {
-        "label": "B",
-        "text": "默认窗口框架是 RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW，可能导致意外结果",
-        "correct": true
-      },
-      {
-        "label": "C",
         "text": "返回的总是表中的最后一行",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "不能与 ORDER BY 一起使用",
         "correct": false
+      },
+      {
+        "label": "C",
+        "text": "必须配合 PARTITION BY 使用",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "默认窗口框架是 RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW，可能导致意外结果",
+        "correct": true
       }
     ],
     "explanation": "LAST_VALUE() 的默认窗口框架是 RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW，这意味着如果当前行不是分区内最后一行，LAST_VALUE实际上返回的是当前行而非分区最后一行。A错误，PARTITION BY是可选的。C错误，它返回窗口框架内最后一行。D错误，LAST_VALUE需要ORDER BY来定义窗口框架。",
@@ -14350,22 +14350,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "两者完全相同",
-        "correct": false
-      },
-      {
-        "label": "B",
         "text": "SUM() OVER() 保留每行记录，同时计算累计或分组汇总值",
         "correct": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "SUM() OVER() 计算速度更快",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "SUM() OVER() 只能用于数值列",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "两者完全相同",
         "correct": false
       }
     ],
@@ -14416,22 +14416,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "对结果集进行排序",
+        "text": "限制返回的行数",
         "correct": false
       },
       {
         "label": "B",
+        "text": "对结果集进行排序",
+        "correct": false
+      },
+      {
+        "label": "C",
         "text": "定义窗口函数的计算范围（分区）",
         "correct": true
       },
       {
-        "label": "C",
-        "text": "过滤不需要的行",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "限制返回的行数",
+        "text": "过滤不需要的行",
         "correct": false
       }
     ],
@@ -14449,23 +14449,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "从分区第一行到当前行的范围",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "从当前行到分区最后一行",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "从分区第一行到分区最后一行",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "当前行的前后各一行",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "从分区第一行到当前行的范围",
+        "correct": true
       }
     ],
     "explanation": "ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW 定义窗口从分区起始行到当前行。B描述的是ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING。C描述的是ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING。D描述的是ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING。",
@@ -14482,22 +14482,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "RANGE 基于行的物理偏移，ROWS 基于逻辑范围",
-        "correct": false
-      },
-      {
-        "label": "B",
         "text": "RANGE 基于排序值的逻辑范围，ROWS 基于行的物理偏移",
         "correct": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "两者完全相同",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "RANGE 只能用于日期类型",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "RANGE 基于行的物理偏移，ROWS 基于逻辑范围",
         "correct": false
       }
     ],
@@ -14548,22 +14548,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "2",
+        "text": "1",
         "correct": false
       },
       {
         "label": "B",
+        "text": "2",
+        "correct": false
+      },
+      {
+        "label": "C",
         "text": "3",
         "correct": true
       },
       {
-        "label": "C",
-        "text": "4",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "1",
+        "text": "4",
         "correct": false
       }
     ],
@@ -14581,23 +14581,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "Tom",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "Bob",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "Jerry",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "NULL",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "Tom",
+        "correct": true
       }
     ],
     "explanation": "dept='A'分区按id排序，id=1的Tom是第一行，FIRST_VALUE(name)='Tom'。Bob虽然也在A分区但是id=3不是第一行。",
@@ -14614,22 +14614,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "20",
-        "correct": false
-      },
-      {
-        "label": "B",
         "text": "30",
         "correct": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "10",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "NULL",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "20",
         "correct": false
       }
     ],
@@ -14680,22 +14680,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "20",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "10",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "30",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "15",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "20",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "10",
         "correct": false
       }
     ],
@@ -14713,23 +14713,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "ROW_NUMBER()",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "COUNT()",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "RANK()",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "ROWNUM",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "ROW_NUMBER()",
+        "correct": true
       }
     ],
     "explanation": "ROW_NUMBER()为每行分配唯一行号。COUNT是聚合函数。RANK可能有并列排名。ROWNUM是Oracle特有关键字不是标准窗口函数。",
@@ -14746,22 +14746,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "DENSE_RANK()",
-        "correct": false
-      },
-      {
-        "label": "B",
-        "text": "ROW_NUMBER()",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "RANK()",
         "correct": true
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "NTILE()",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "DENSE_RANK()",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "ROW_NUMBER()",
         "correct": false
       }
     ],
@@ -14812,22 +14812,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "ROW_NUMBER()",
+        "text": "DENSE_RANK()",
         "correct": false
       },
       {
         "label": "B",
+        "text": "ROW_NUMBER()",
+        "correct": false
+      },
+      {
+        "label": "C",
         "text": "NTILE(5)",
         "correct": true
       },
       {
-        "label": "C",
-        "text": "RANK()",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "DENSE_RANK()",
+        "text": "RANK()",
         "correct": false
       }
     ],
@@ -14846,23 +14846,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "LEAD()",
+        "text": "LAST_VALUE()",
         "correct": false
       },
       {
         "label": "B",
-        "text": "FIRST_VALUE()",
+        "text": "LEAD()",
         "correct": false
       },
       {
         "label": "C",
-        "text": "LAG()",
-        "correct": true
+        "text": "FIRST_VALUE()",
+        "correct": false
       },
       {
         "label": "D",
-        "text": "LAST_VALUE()",
-        "correct": false
+        "text": "LAG()",
+        "correct": true
       }
     ],
     "explanation": "LAG()访问当前行之前的行。LEAD访问之后的行。FIRST_VALUE和LAST_VALUE分别是首尾值函数。",
@@ -14912,22 +14912,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "添加 WHERE dept_id IS NOT NULL",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "添加 PARTITION BY dept_id",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "添加 GROUP BY dept_id",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "将 ORDER BY 改为 PARTITION BY",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "添加 WHERE dept_id IS NOT NULL",
+        "text": "将 ORDER BY 改为 PARTITION BY",
         "correct": false
       }
     ],
@@ -14945,22 +14945,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "LAG偏移量为0时返回当前行自身，与直接引用val等效",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "LAG偏移量为0会报错",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "LAG偏移量为0返回NULL",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "LAG偏移量为0返回前一行",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "LAG偏移量为0时返回当前行自身，与直接引用val等效",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "LAG偏移量为0会报错",
         "correct": false
       }
     ],
@@ -14978,23 +14978,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "PARTITION BY 定义分区，ORDER BY 定义分区内排序",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "PARTITION BY 定义排序，ORDER BY 定义分区",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "两者完全相同",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "PARTITION BY 可以替代 ORDER BY",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "PARTITION BY 定义分区，ORDER BY 定义分区内排序",
+        "correct": true
       }
     ],
     "explanation": "PARTITION BY定义分区范围，ORDER BY定义分区内的排序方式。B说反了。C两者功能不同。D不能替代，两者功能不同。",
@@ -15045,22 +15045,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "1到4",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "1到5",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "0到4",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "1到N（N为总行数）",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "1到4",
+        "text": "1到N（N为总行数）",
         "correct": false
       }
     ],
@@ -15079,22 +15079,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "1,2,2,3",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "1,2,2,4",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "1,1,2,3",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "1,3,3,4",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "1,2,2,3",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "1,2,2,4",
         "correct": false
       }
     ],
@@ -15113,23 +15113,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "RANGE BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW",
+        "correct": true
       }
     ],
     "explanation": "当OVER()中有ORDER BY时，默认窗口框架是RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW。B是完整分区范围。C是前后各一行。D是完整分区范围(RANGE版本)。",
@@ -15182,22 +15182,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "p=NULL, n='b'",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "p='z', n='b'",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "p='a', n='b'",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "p='z', n='a'",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "p=NULL, n='b'",
+        "text": "p='z', n='a'",
         "correct": false
       }
     ],
@@ -15249,23 +15249,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "10或20（取决于具体行，默认窗口框架导致最后一行可能是当前行）",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "20",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "30",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "NULL",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "10或20（取决于具体行，默认窗口框架导致最后一行可能是当前行）",
+        "correct": true
       }
     ],
     "explanation": "LAST_VALUE默认窗口框架是RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW，意味着LAST_VALUE取的是当前行而非分区最后一行。grp='A'有两行，第一行id=1的lv=10（当前行），第二行id=2的lv=20（当前行）。题目问grp='A'的lv，答案取决于具体行。",
@@ -15315,22 +15315,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "计算7天前的单行值",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "计算过去7天的累计值",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "计算未来7天的值",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "计算前7行的值",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "计算7天前的单行值",
+        "text": "计算前7行的值",
         "correct": false
       }
     ],
@@ -15349,22 +15349,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "LAG(name) OVER(PARTITION BY dept ORDER BY hire_date)",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "LEAD(name) OVER(PARTITION BY dept ORDER BY hire_date)",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "LAG(name) OVER(ORDER BY hire_date)",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "FIRST_VALUE(name) OVER(PARTITION BY dept ORDER BY hire_date)",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "LAG(name) OVER(PARTITION BY dept ORDER BY hire_date)",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "LEAD(name) OVER(PARTITION BY dept ORDER BY hire_date)",
         "correct": false
       }
     ],
@@ -15382,23 +15382,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "LAST_VALUE默认窗口框架不包括后续行，可能返回当前行而非分区最后一行",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "LAST_VALUE不支持ORDER BY",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "LAST_VALUE必须配合PARTITION BY",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "LAST_VALUE返回NULL",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "LAST_VALUE默认窗口框架不包括后续行，可能返回当前行而非分区最后一行",
+        "correct": true
       }
     ],
     "explanation": "默认窗口框架RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW导致LAST_VALUE可能返回当前行值而非分区最后一行。B错误，LAST_VALUE需要ORDER BY。C错误，PARTITION BY可选。D错误，不会返回NULL。",
@@ -15450,22 +15450,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "两者功能相同",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "FIRST_VALUE 取窗口框架内排序第一行的值，LAST_VALUE 取窗口框架内排序最后一行的值",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "FIRST_VALUE 取分区内最小值，LAST_VALUE 取分区内最大值",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "FIRST_VALUE 不需要 ORDER BY，LAST_VALUE 需要",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "两者功能相同",
+        "text": "FIRST_VALUE 不需要 ORDER BY，LAST_VALUE 需要",
         "correct": false
       }
     ],
@@ -15484,22 +15484,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "400",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "250",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "150",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "700",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "400",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "250",
         "correct": false
       }
     ],
@@ -15518,23 +15518,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "5",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "3",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "2",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "4",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "5",
+        "correct": true
       }
     ],
     "explanation": "原表5行全部保留，ROW_NUMBER只是附加序号不改变行数。返回5行。B、C、D行数不正确。",
@@ -15587,22 +15587,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "NTILE()",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "ROW_NUMBER()",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "RANK()",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "DENSE_RANK()",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "NTILE()",
+        "text": "DENSE_RANK()",
         "correct": false
       }
     ],
@@ -15620,22 +15620,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "2",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "3",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "1",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "5",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "2",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "3",
         "correct": false
       }
     ],
@@ -15654,23 +15654,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "LEAD(salary) OVER(PARTITION BY dept ORDER BY salary)",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "LAG(salary) OVER(PARTITION BY dept ORDER BY salary)",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "LEAD(salary) OVER(ORDER BY salary)",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "FIRST_VALUE(salary) OVER(PARTITION BY dept ORDER BY salary)",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "LEAD(salary) OVER(PARTITION BY dept ORDER BY salary)",
+        "correct": true
       }
     ],
     "explanation": "LEAD按部门分区取下一行。B用LAG取前一行。C没有按部门分区。D取首行值不是下一行。",
@@ -15722,22 +15722,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "两者在重复值情况下无区别",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "RANGE 会将相同排序值的行视为同一窗口边界，ROWS 不会",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "ROWS 比 RANGE 计算更快",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "RANGE 只能用于日期类型",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "两者在重复值情况下无区别",
+        "text": "RANGE 只能用于日期类型",
         "correct": false
       }
     ],
@@ -15755,22 +15755,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "第1桶4行，第2桶3行",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "第1桶3行，第2桶4行",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "两桶各3.5行（不可能）",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "两桶各3行，余1行丢弃",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "第1桶4行，第2桶3行",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "第1桶3行，第2桶4行",
         "correct": false
       }
     ],
@@ -15789,23 +15789,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "20",
-        "correct": false
-      },
-      {
-        "label": "B",
-        "text": "40",
-        "correct": true
-      },
-      {
-        "label": "C",
         "text": "30",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "60",
         "correct": false
+      },
+      {
+        "label": "C",
+        "text": "20",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "40",
+        "correct": true
       }
     ],
     "explanation": "按val排序：id=1 val=10, id=2 val=10, id=3 val=20, id=4 val=30。RANGE将相同val视为一体，id=3的val=20，SUM范围到val=20处，包含val=10的两行和val=20的行，sum=10+10+20=40。但id=1和id=2的val=10相同，RANGE下都包含。实际id=3处sum=10+10+20=40。",
@@ -15858,22 +15858,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "AVG(val) OVER(PARTITION BY date)",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "AVG(val) OVER(ORDER BY date RANGE BETWEEN INTERVAL 7 DAY PRECEDING AND CURRENT ROW)",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "AVG(val) OVER(ORDER BY date ROWS BETWEEN 7 PRECEDING AND CURRENT ROW)",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "AVG(val) OVER(ORDER BY date RANGE BETWEEN 7 PRECEDING AND CURRENT ROW)",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "AVG(val) OVER(PARTITION BY date)",
+        "text": "AVG(val) OVER(ORDER BY date RANGE BETWEEN 7 PRECEDING AND CURRENT ROW)",
         "correct": false
       }
     ],
@@ -15892,22 +15892,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "NTILE(4) OVER(PARTITION BY dept ORDER BY salary)",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "NTILE(4) OVER(ORDER BY salary) PARTITION BY dept",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "NTILE(PARTITION BY dept, 4) OVER(ORDER BY salary)",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "PARTITION BY dept NTILE(4) OVER(ORDER BY salary)",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "NTILE(4) OVER(PARTITION BY dept ORDER BY salary)",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "NTILE(4) OVER(ORDER BY salary) PARTITION BY dept",
         "correct": false
       }
     ],
@@ -15926,23 +15926,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "ROWS逐行计算整个分区，RANGE按值范围计算整个分区，两者在UNBOUNDED时结果相同",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "ROWS只计算当前行",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "RANGE会忽略重复值",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "两者完全不同",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "ROWS逐行计算整个分区，RANGE按值范围计算整个分区，两者在UNBOUNDED时结果相同",
+        "correct": true
       }
     ],
     "explanation": "当窗口框架都是UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING时，ROWS和RANGE覆盖整个分区，结果相同。B错误，ROWS计算整个分区。C错误，RANGE不忽略重复值。D过于绝对。",
@@ -15994,22 +15994,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "使用 FIRST_VALUE 替代",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "添加 ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "添加 PARTITION BY",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "去掉 ORDER BY",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "使用 FIRST_VALUE 替代",
+        "text": "去掉 ORDER BY",
         "correct": false
       }
     ],
@@ -16027,22 +16027,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "DENSE_RANK() 不会跳过排名，RANK() 会跳过",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "DENSE_RANK() 只能用于数字列",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "RANK() 不需要 ORDER BY 子句",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "两者完全相同，没有区别",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "DENSE_RANK() 不会跳过排名，RANK() 会跳过",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "DENSE_RANK() 只能用于数字列",
         "correct": false
       }
     ],
@@ -16060,23 +16060,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "NTILE(4)",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "QUARTILE(4)",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "NTILE(3)",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "GROUP(4)",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "NTILE(4)",
+        "correct": true
       }
     ],
     "explanation": "NTILE(n) 将结果分为n个桶，NTILE(4) 即分为4个等级。QUARTILE 和 GROUP 不是SQL标准函数。NTILE(3) 只分3个等级不符合题意。",
@@ -16126,22 +16126,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "INSERT INTO students(id, name) = (1, '李四')",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "INSERT INTO students(id, name) VALUES(1, '李四')",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "INSERT INTO students(id, name) VALUE(1, '李四')",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "INSERT students(id, name) VALUES(1, '李四')",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "INSERT INTO students(id, name) = (1, '李四')",
+        "text": "INSERT students(id, name) VALUES(1, '李四')",
         "correct": false
       }
     ],
@@ -16159,22 +16159,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "UPDATE students SET name='王五' WHERE id=1",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "UPDATE students SET name='王五' AND id=1",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "ALTER students SET name='王五' WHERE id=1",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "UPDATE students name='王五' WHERE id=1",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "UPDATE students SET name='王五' WHERE id=1",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "UPDATE students SET name='王五' AND id=1",
         "correct": false
       }
     ],
@@ -16192,23 +16192,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "DELETE FROM students WHERE id=5",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "DELETE students WHERE id=5",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "REMOVE FROM students WHERE id=5",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "DELETE FROM students HAVING id=5",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "DELETE FROM students WHERE id=5",
+        "correct": true
       }
     ],
     "explanation": "DELETE FROM table WHERE cond 是标准语法。缺少FROM关键字不合法，REMOVE不是SQL删除关键字，HAVING用于分组过滤不能用于DELETE。",
@@ -16258,22 +16258,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "Agility（敏捷性）",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "Atomicity（原子性）",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "Availability（可用性）",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "Accuracy（准确性）",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "Agility（敏捷性）",
+        "text": "Accuracy（准确性）",
         "correct": false
       }
     ],
@@ -16291,22 +16291,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "Isolation（隔离性）",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "Integrity（完整性）",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "Immutability（不可变性）",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "Independence（独立性）",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "Isolation（隔离性）",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "Integrity（完整性）",
         "correct": false
       }
     ],
@@ -16324,23 +16324,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "COMMIT",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "SAVE",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "APPLY",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "CONFIRM",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "COMMIT",
+        "correct": true
       }
     ],
     "explanation": "COMMIT用于提交事务，使变更永久生效。SAVE、APPLY、CONFIRM均不是SQL事务提交关键字。",
@@ -16390,22 +16390,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "INSERT INTO t VALUES(1,'a') AND (2,'b')",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "INSERT INTO t VALUES(1,'a'),(2,'b')",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "INSERT INTO t VALUES(1,'a';2,'b')",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "INSERT INTO t VALUES(1,'a')(2,'b')",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "INSERT INTO t VALUES(1,'a') AND (2,'b')",
+        "text": "INSERT INTO t VALUES(1,'a')(2,'b')",
         "correct": false
       }
     ],
@@ -16423,22 +16423,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "更新表中所有行",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "报语法错误",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "只更新第一行",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "不执行任何更新",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "更新表中所有行",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "报语法错误",
         "correct": false
       }
     ],
@@ -16456,23 +16456,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "删除表中所有行",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "报语法错误",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "只删除第一行",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "删除表结构",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "删除表中所有行",
+        "correct": true
       }
     ],
     "explanation": "省略WHERE时DELETE会删除全部行数据，但表结构仍在。不是语法错误，不会只删第一行，也不会删除表结构。",
@@ -16522,22 +16522,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "将id=5的price乘以1.1后四舍五入为整数",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "将id=5的price提高10%",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "将所有行的price提高10%",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "将id=5的price设为1.1",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "将id=5的price乘以1.1后四舍五入为整数",
+        "text": "将id=5的price设为1.1",
         "correct": false
       }
     ],
@@ -16555,22 +16555,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "删除status为cancelled的所有行",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "删除status列",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "删除整个orders表",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "将status为cancelled的行标记为删除但保留",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "删除status为cancelled的所有行",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "删除status列",
         "correct": false
       }
     ],
@@ -16588,23 +16588,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "数据清空，表结构保留",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "表被完全删除",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "只保留最后一行数据",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "数据移到回收站",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "数据清空，表结构保留",
+        "correct": true
       }
     ],
     "explanation": "TRUNCATE清空数据但保留表结构。不会删除表本身，不会保留最后一行，也没有回收站概念。",
@@ -16654,22 +16654,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "UPDATE dept SET dname='Sales', loc='NYC'",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "UPDATE dept SET loc='NYC' WHERE dname='Sales'",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "UPDATE dept SET loc='NYC' AND dname='Sales'",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "UPDATE dept loc='NYC' WHERE dname='Sales'",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "UPDATE dept SET dname='Sales', loc='NYC'",
+        "text": "UPDATE dept loc='NYC' WHERE dname='Sales'",
         "correct": false
       }
     ],
@@ -16687,22 +16687,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "DELETE FROM scores WHERE score < 60",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "DELETE scores WHERE score < 60",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "DELETE FROM scores HAVING score < 60",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "REMOVE FROM scores WHERE score < 60",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "DELETE FROM scores WHERE score < 60",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "DELETE scores WHERE score < 60",
         "correct": false
       }
     ],
@@ -16720,23 +16720,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "empno为主键列未提供值",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "ename列不存在",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "VALUES中缺少INTO关键字",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "字符串未用双引号",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "empno为主键列未提供值",
+        "correct": true
       }
     ],
     "explanation": "empno为主键列但INSERT中未包含它，导致主键为NULL报错。ename列存在，语法本身正确，字符串用单引号也是正确的。",
@@ -16786,22 +16786,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "DELETE关键字拼写错误",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "缺少FROM关键字",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "WHERE子句语法错误",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "id = 3 不存在",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "DELETE关键字拼写错误",
+        "text": "id = 3 不存在",
         "correct": false
       }
     ],
@@ -16819,22 +16819,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "应为TRUNCATE TABLE students",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "表不存在",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "TRUNCATE拼写错误",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "需要WHERE子句",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "应为TRUNCATE TABLE students",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "表不存在",
         "correct": false
       }
     ],
@@ -16852,23 +16852,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "Durability（持久性）",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "Durability（动态性）",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "Durability（分布式）",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "Durability（确定性）",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "Durability（持久性）",
+        "correct": true
       }
     ],
     "explanation": "ACID中D代表Durability持久性，事务提交后数据永久保存。动态性、分布式、确定性均不是Durability在此语境下的含义。",
@@ -16918,22 +16918,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "更新A中id>100的行",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "将B中id>100的行插入到A中",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "将A中id>100的行复制到B中",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "删除B中id>100的行",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "更新A中id>100的行",
+        "text": "删除B中id>100的行",
         "correct": false
       }
     ],
@@ -16951,22 +16951,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "无变化，ROLLBACK撤销了更新",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "balance减少了100",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "报错，ROLLBACK前需COMMIT",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "balance减少100后再恢复50",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "无变化，ROLLBACK撤销了更新",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "balance减少了100",
         "correct": false
       }
     ],
@@ -16984,23 +16984,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "INSERT INTO colors(name) VALUES('red'),('blue')",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "INSERT INTO colors(name) VALUES('red','blue')",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "INSERT INTO colors VALUES('red'),('blue')",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "INSERT INTO colors(name) VALUES('red') AND ('blue')",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "INSERT INTO colors(name) VALUES('red'),('blue')",
+        "correct": true
       }
     ],
     "explanation": "多行插入用逗号分隔值组。单组内不能同时包含两行值导致列数不匹配，AND不是值分隔符。",
@@ -17050,22 +17050,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "创建数据库快照",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "在事务中设置保存点，可部分回滚",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "自动提交事务",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "删除保存点",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "创建数据库快照",
+        "text": "删除保存点",
         "correct": false
       }
     ],
@@ -17083,22 +17083,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "INSERT INTO dept_backup SELECT * FROM dept",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "INSERT INTO dept_backup FROM SELECT * FROM dept",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "INSERT dept_backup SELECT * FROM dept",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "INSERT INTO dept_backup VALUES(SELECT * FROM dept)",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "INSERT INTO dept_backup SELECT * FROM dept",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "INSERT INTO dept_backup FROM SELECT * FROM dept",
         "correct": false
       }
     ],
@@ -17116,23 +17116,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "UPDATE t1 JOIN t2 ON t1.id=t2.id SET t1.col=t2.col",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "UPDATE t1, t2 SET t1.col=t2.col WHERE t1.id=t2.id",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "UPDATE t1 SET t1.col=t2.col FROM t2 WHERE t1.id=t2.id",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "以上都是合法的UPDATE JOIN写法",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "UPDATE t1 JOIN t2 ON t1.id=t2.id SET t1.col=t2.col",
+        "correct": true
       }
     ],
     "explanation": "A是MySQL的JOIN语法，B是MySQL的隐式JOIN语法，C是SQL Server的UPDATE FROM语法。D不正确，因为不同数据库支持不同语法，不能说都合法。",
@@ -17182,22 +17182,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "创建索引",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "同时执行INSERT和UPDATE（upsert）",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "合并两个表的结构",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "删除重复数据",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "创建索引",
+        "text": "删除重复数据",
         "correct": false
       }
     ],
@@ -17215,22 +17215,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "可以读取未提交的数据（脏读）",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "只能读取已提交的数据",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "可重复读取",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "完全串行化",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "可以读取未提交的数据（脏读）",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "只能读取已提交的数据",
         "correct": false
       }
     ],
@@ -17248,23 +17248,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "脏读和不可重复读",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "脏读和幻读",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "不可重复读和幻读",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "脏读、不可重复读和幻读",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "脏读和不可重复读",
+        "correct": true
       }
     ],
     "explanation": "REPEATABLE READ防止脏读和不可重复读，但可能出现幻读。防止幻读需要SERIALIZABLE级别。",
@@ -17314,22 +17314,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "报错，JOIN不能用于UPDATE",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "根据部门奖金比例加薪",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "所有员工工资相同",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "只更新第一条记录",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "报错，JOIN不能用于UPDATE",
+        "text": "只更新第一条记录",
         "correct": false
       }
     ],
@@ -17347,22 +17347,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "删除HR部门的所有员工记录",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "删除dept表中HR部门",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "删除emp和dept中HR相关记录",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "报语法错误",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "删除HR部门的所有员工记录",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "删除dept表中HR部门",
         "correct": false
       }
     ],
@@ -17380,23 +17380,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "id=1的val被更新，id=2被插入",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "id=1和id=2都被插入",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "只更新id=1的val",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "报错，MERGE不能同时更新和插入",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "id=1的val被更新，id=2被插入",
+        "correct": true
       }
     ],
     "explanation": "MERGE匹配时更新，不匹配时插入。id=1匹配则更新，id=2不匹配则插入。可以同时更新和插入。",
@@ -17446,22 +17446,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "UPDATE customers, orders SET c.total=c.total+o.amount",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "UPDATE customers c JOIN orders o ON c.id=o.cust_id SET c.total=c.total+o.amount",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "UPDATE orders o JOIN customers c ON c.id=o.cust_id SET c.total=c.total+o.amount",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "UPDATE customers SET total=total+amount JOIN orders ON customers.id=orders.cust_id",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "UPDATE customers, orders SET c.total=c.total+o.amount",
+        "text": "UPDATE customers SET total=total+amount JOIN orders ON customers.id=orders.cust_id",
         "correct": false
       }
     ],
@@ -17479,22 +17479,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "DELETE FROM emp WHERE dept_id=5",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "DELETE emp WHERE dept_id=5",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "DELETE FROM emp HAVING dept_id=5",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "DELETE FROM emp WHERE 5=dept_id",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "DELETE FROM emp WHERE dept_id=5",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "DELETE emp WHERE dept_id=5",
         "correct": false
       }
     ],
@@ -17512,23 +17512,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "MERGE INTO target USING source ON (condition) WHEN MATCHED THEN ... WHEN NOT MATCHED THEN ...",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "MERGE target FROM source ON (condition) WHEN MATCHED THEN ...",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "MERGE INTO target VALUES source ON (condition) ...",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "UPSERT INTO target USING source ON (condition) ...",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "MERGE INTO target USING source ON (condition) WHEN MATCHED THEN ... WHEN NOT MATCHED THEN ...",
+        "correct": true
       }
     ],
     "explanation": "MERGE INTO ... USING ... ON ... WHEN MATCHED/NOT MATCHED 是标准语法。缺少USING不合法，VALUES不是MERGE关键字，UPSERT不是SQL标准。",
@@ -17578,22 +17578,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "匹配的行保持不变",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "匹配的行被删除",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "匹配的行被更新",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "报错，MERGE不能DELETE",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "匹配的行保持不变",
+        "text": "报错，MERGE不能DELETE",
         "correct": false
       }
     ],
@@ -17611,22 +17611,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "下降，因为串行化执行限制并发",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "提升，因为优化了查询",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "不变",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "取决于表的大小",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "下降，因为串行化执行限制并发",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "提升，因为优化了查询",
         "correct": false
       }
     ],
@@ -17644,23 +17644,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "事务提交后数据永久保存，即使系统崩溃",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "事务执行速度很快",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "数据不会被误删除",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "并发事务互不干扰",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "事务提交后数据永久保存，即使系统崩溃",
+        "correct": true
       }
     ],
     "explanation": "持久性保证提交后的数据在系统崩溃后也能恢复。不是执行速度，不是防误删，互不干扰是隔离性。",
@@ -17710,22 +17710,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "数据被意外删除",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "同一查询在事务中两次执行结果行数不同",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "读取到未提交的数据",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "同一行数据两次读取值不同",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "数据被意外删除",
+        "text": "同一行数据两次读取值不同",
         "correct": false
       }
     ],
@@ -17743,22 +17743,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "先判断ON条件，匹配则UPDATE，不匹配则INSERT",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "先INSERT再UPDATE",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "UPDATE和INSERT同时执行",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "只执行MATCHED分支",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "先判断ON条件，匹配则UPDATE，不匹配则INSERT",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "先INSERT再UPDATE",
         "correct": false
       }
     ],
@@ -17776,23 +17776,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SQL Server",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "MySQL",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "Oracle",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "SQLite",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "SQL Server",
+        "correct": true
       }
     ],
     "explanation": "UPDATE FROM是SQL Server特有语法。MySQL使用UPDATE JOIN，Oracle使用MERGE，SQLite也有UPDATE FROM但语法不同。",
@@ -17842,22 +17842,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "使用乐观锁",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "对查询范围加范围锁或Next-Key Lock",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "只使用行级锁",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "不使用任何锁",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "使用乐观锁",
+        "text": "不使用任何锁",
         "correct": false
       }
     ],
@@ -17876,22 +17876,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "事务执行中系统崩溃导致部分操作已写入磁盘",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "两个事务并发执行",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "COMMIT执行成功",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT查询返回多行",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "事务执行中系统崩溃导致部分操作已写入磁盘",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "两个事务并发执行",
         "correct": false
       }
     ],
@@ -17909,23 +17909,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "同时锁定记录和记录前的间隙，防止幻读",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "只锁定单行记录",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "锁定整张表",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "锁定数据库实例",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "同时锁定记录和记录前的间隙，防止幻读",
+        "correct": true
       }
     ],
     "explanation": "Next-Key Lock锁定记录及间隙，用于防止幻读。不是单行锁，不是表锁，不是实例级锁。",
@@ -17975,22 +17975,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "更新所有行",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "插入一行(1,'X')",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "不执行任何操作",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "报错，target不能为空",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "更新所有行",
+        "text": "报错，target不能为空",
         "correct": false
       }
     ],
@@ -18009,22 +18009,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "2行，id=1和id=2",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "3行",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "1行",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "0行",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "2行，id=1和id=2",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "3行",
         "correct": false
       }
     ],
@@ -18042,23 +18042,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "可以交换，执行效果相同",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "不可以，语法要求固定顺序",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "交换后报语法错误",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "交换后只执行第一个分支",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "可以交换，执行效果相同",
+        "correct": true
       }
     ],
     "explanation": "MERGE的MATCHED和NOT MATCHED顺序可以交换，效果相同。语法不要求固定顺序，交换不会报错，两个分支都会被评估。",
@@ -18110,22 +18110,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "SELECT COUNT(*) FROM user_login WHERE DATE_FORMAT(login_time,'%Y-%m')='2024-01'",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "SELECT DATE_FORMAT(login_time,'%Y-%m') as month, COUNT(DISTINCT user_id) as mau FROM user_login GROUP BY DATE_FORMAT(login_time,'%Y-%m')",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "SELECT DATE_FORMAT(login_time,'%Y-%m') as month, COUNT(user_id) as mau FROM user_login GROUP BY DATE_FORMAT(login_time,'%Y-%m')",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "SELECT DATE(login_time) as dt, COUNT(DISTINCT user_id) as mau FROM user_login GROUP BY DATE(login_time)",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "SELECT COUNT(*) FROM user_login WHERE DATE_FORMAT(login_time,'%Y-%m')='2024-01'",
+        "text": "SELECT DATE(login_time) as dt, COUNT(DISTINCT user_id) as mau FROM user_login GROUP BY DATE(login_time)",
         "correct": false
       }
     ],
@@ -18144,22 +18144,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT DATE(register_time) as dt, COUNT(DISTINCT user_id) as new_users FROM user_register GROUP BY DATE(register_time)",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT DATE(register_time) as dt, COUNT(*) as new_users FROM user_register GROUP BY dt HAVING COUNT(*)>1",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT COUNT(*) FROM user_register",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT user_id, DATE(register_time) FROM user_register ORDER BY register_time",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT DATE(register_time) as dt, COUNT(DISTINCT user_id) as new_users FROM user_register GROUP BY DATE(register_time)",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT DATE(register_time) as dt, COUNT(*) as new_users FROM user_register GROUP BY dt HAVING COUNT(*)>1",
         "correct": false
       }
     ],
@@ -18178,23 +18178,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT province, COUNT(DISTINCT user_id) as user_cnt FROM user_profile GROUP BY province ORDER BY user_cnt DESC",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "SELECT province, COUNT(*) FROM user_profile GROUP BY province",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "SELECT DISTINCT province FROM user_profile",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "SELECT province, SUM(user_id) FROM user_profile GROUP BY province",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "SELECT province, COUNT(DISTINCT user_id) as user_cnt FROM user_profile GROUP BY province ORDER BY user_cnt DESC",
+        "correct": true
       }
     ],
     "explanation": "地区分布需按省份分组并去重计数用户。B缺少DISTINCT。C只返回省份列表无计数。D对user_id做SUM无意义。",
@@ -18246,22 +18246,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "SELECT dt, COUNT(DISTINCT user_id) as retained FROM user_login GROUP BY dt HAVING dt='2024-01-02'",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "SELECT dt, COUNT(DISTINCT b.user_id) as retained FROM (SELECT DATE(login_time) as dt, user_id FROM user_login WHERE DATE(login_time)='2024-01-01') a LEFT JOIN user_login b ON a.user_id=b.user_id AND DATE(b.login_time)='2024-01-02' GROUP BY dt",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "SELECT dt, COUNT(*) as retained FROM user_login WHERE DATE(login_time)='2024-01-02' GROUP BY dt",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "SELECT COUNT(DISTINCT user_id) FROM user_login WHERE DATE(login_time)='2024-01-02'",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "SELECT dt, COUNT(DISTINCT user_id) as retained FROM user_login GROUP BY dt HAVING dt='2024-01-02'",
+        "text": "SELECT COUNT(DISTINCT user_id) FROM user_login WHERE DATE(login_time)='2024-01-02'",
         "correct": false
       }
     ],
@@ -18280,22 +18280,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT device_type, COUNT(DISTINCT user_id) as cnt, ROUND(COUNT(DISTINCT user_id)*100.0/(SELECT COUNT(DISTINCT user_id) FROM user_profile),2) as pct FROM user_profile GROUP BY device_type",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT device_type, COUNT(*) as cnt FROM user_profile GROUP BY device_type",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT device_type, AVG(user_id) as pct FROM user_profile GROUP BY device_type",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT device_type, COUNT(DISTINCT user_id) FROM user_profile",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT device_type, COUNT(DISTINCT user_id) as cnt, ROUND(COUNT(DISTINCT user_id)*100.0/(SELECT COUNT(DISTINCT user_id) FROM user_profile),2) as pct FROM user_profile GROUP BY device_type",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT device_type, COUNT(*) as cnt FROM user_profile GROUP BY device_type",
         "correct": false
       }
     ],
@@ -18314,23 +18314,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT user_id, COUNT(*) as cnt FROM user_login GROUP BY user_id HAVING COUNT(*)>1",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "SELECT DISTINCT user_id FROM user_login WHERE COUNT(*)>1",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "SELECT user_id FROM user_login GROUP BY user_id HAVING COUNT(*)=1",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "SELECT * FROM user_login WHERE user_id IN (SELECT user_id FROM user_login GROUP BY user_id)",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "SELECT user_id, COUNT(*) as cnt FROM user_login GROUP BY user_id HAVING COUNT(*)>1",
+        "correct": true
       }
     ],
     "explanation": "找重复记录需GROUP BY后HAVING COUNT(*)>1。B混用DISTINCT和聚合函数语法错误。C找的是不重复的。D子查询没有HAVING条件。",
@@ -18382,22 +18382,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "SELECT user_id, age FROM user_profile WHERE age IS NOT NULL OR age>0",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "SELECT user_id, age FROM user_profile WHERE age IS NOT NULL AND age>0",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "SELECT user_id, age FROM user_profile WHERE age != 0",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "SELECT user_id, age FROM user_profile WHERE age > 0",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "SELECT user_id, age FROM user_profile WHERE age IS NOT NULL OR age>0",
+        "text": "SELECT user_id, age FROM user_profile WHERE age > 0",
         "correct": false
       }
     ],
@@ -18416,22 +18416,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT a.dt, COUNT(DISTINCT b.user_id) as retained FROM (SELECT DATE(login_time) as dt, user_id FROM user_login WHERE dt='2024-01-01') a LEFT JOIN user_login b ON a.user_id=b.user_id AND DATE(b.login_time)=DATE_ADD('2024-01-01',INTERVAL 6 DAY) GROUP BY a.dt",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT dt, COUNT(*) FROM user_login WHERE DATE(login_time) BETWEEN '2024-01-01' AND '2024-01-07'",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT a.user_id FROM user_login a JOIN user_login b ON a.user_id=b.user_id",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT COUNT(DISTINCT user_id) FROM user_login WHERE DATE(login_time)='2024-01-07'",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT a.dt, COUNT(DISTINCT b.user_id) as retained FROM (SELECT DATE(login_time) as dt, user_id FROM user_login WHERE dt='2024-01-01') a LEFT JOIN user_login b ON a.user_id=b.user_id AND DATE(b.login_time)=DATE_ADD('2024-01-01',INTERVAL 6 DAY) GROUP BY a.dt",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT dt, COUNT(*) FROM user_login WHERE DATE(login_time) BETWEEN '2024-01-01' AND '2024-01-07'",
         "correct": false
       }
     ],
@@ -18450,23 +18450,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT COUNT(DISTINCT a.user_id) as activated FROM user_register a LEFT JOIN user_activate b ON a.user_id=b.user_id WHERE b.user_id IS NOT NULL",
+        "text": "SELECT COUNT(*) FROM user_register a, user_activate b WHERE a.user_id=b.user_id",
         "correct": false
       },
       {
         "label": "B",
-        "text": "SELECT COUNT(DISTINCT user_id) as activated FROM user_activate",
+        "text": "SELECT COUNT(DISTINCT a.user_id) as activated FROM user_register a LEFT JOIN user_activate b ON a.user_id=b.user_id WHERE b.user_id IS NOT NULL",
         "correct": false
       },
       {
         "label": "C",
-        "text": "SELECT COUNT(DISTINCT b.user_id) as activated FROM user_register a INNER JOIN user_activate b ON a.user_id=b.user_id",
-        "correct": true
+        "text": "SELECT COUNT(DISTINCT user_id) as activated FROM user_activate",
+        "correct": false
       },
       {
         "label": "D",
-        "text": "SELECT COUNT(*) FROM user_register a, user_activate b WHERE a.user_id=b.user_id",
-        "correct": false
+        "text": "SELECT COUNT(DISTINCT b.user_id) as activated FROM user_register a INNER JOIN user_activate b ON a.user_id=b.user_id",
+        "correct": true
       }
     ],
     "explanation": "漏斗计算需INNER JOIN注册表和激活表取交集。A用LEFT JOIN后过滤NULL效果等价但不如INNER JOIN直观。B只查激活表。D用COUNT(*)且笛卡尔积写法不规范。",
@@ -18518,22 +18518,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "SELECT DISTINCT province, user_id FROM user_consume WHERE amount>100",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "SELECT province, user_id, amount FROM (SELECT province, user_id, amount, ROW_NUMBER() OVER(PARTITION BY province ORDER BY amount DESC) as rn FROM user_consume) t WHERE rn<=3",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "SELECT province, user_id, amount FROM user_consume ORDER BY amount DESC LIMIT 3",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "SELECT province, user_id, MAX(amount) FROM user_consume GROUP BY province, user_id",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "SELECT DISTINCT province, user_id FROM user_consume WHERE amount>100",
+        "text": "SELECT province, user_id, MAX(amount) FROM user_consume GROUP BY province, user_id",
         "correct": false
       }
     ],
@@ -18552,22 +18552,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT a.user_id FROM user_profile a LEFT JOIN orders b ON a.user_id=b.user_id WHERE b.order_id IS NULL",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT user_id FROM user_profile WHERE user_id NOT IN (SELECT user_id FROM orders)",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT a.user_id FROM user_profile a INNER JOIN orders b ON a.user_id=b.user_id",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT user_id FROM orders WHERE order_id IS NULL",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT a.user_id FROM user_profile a LEFT JOIN orders b ON a.user_id=b.user_id WHERE b.order_id IS NULL",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT user_id FROM user_profile WHERE user_id NOT IN (SELECT user_id FROM orders)",
         "correct": false
       }
     ],
@@ -18586,23 +18586,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "缺少GROUP BY子句，应添加GROUP BY dt",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "COUNT(DISTINCT)语法错误",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "dt字段不存在",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "SELECT中不能有非聚合列",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "缺少GROUP BY子句，应添加GROUP BY dt",
+        "correct": true
       }
     ],
     "explanation": "SELECT中使用了dt列但缺少GROUP BY，导致聚合函数与非聚合列混用报错。B语法本身正确。C的dt可能是别名但题目未说明。D说法过于绝对，有GROUP BY时可以混用。",
@@ -18620,23 +18620,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "DATE_ADD(a.dt, INTERVAL 1 DAY)中a.dt应为DATE类型，如果a.dt包含时间部分则DATE_ADD结果可能不符合预期",
+        "correct": true
+      },
+      {
+        "label": "B",
         "text": "a.dt是日期字段但LEFT JOIN条件中DATE_ADD可能返回NULL导致无匹配",
         "correct": false
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "SQL语法正确，结果为空说明确实没有留存用户",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "D",
         "text": "GROUP BY后缺少HAVING过滤",
         "correct": false
-      },
-      {
-        "label": "D",
-        "text": "DATE_ADD(a.dt, INTERVAL 1 DAY)中a.dt应为DATE类型，如果a.dt包含时间部分则DATE_ADD结果可能不符合预期",
-        "correct": true
       }
     ],
     "explanation": "如果a.dt字段包含时间部分（如datetime），DATE_ADD结果可能不准确。此外LEFT JOIN本身不会产生空结果。B忽略了技术问题。C的HAVING非必须。A描述不精确。",
@@ -18654,22 +18654,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "表名拼写错误",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "COUNT(user_id)没有用DISTINCT，同一用户多次登录被重复计数",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "GROUP BY分组不正确",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "DATE函数使用错误",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "表名拼写错误",
+        "text": "DATE函数使用错误",
         "correct": false
       }
     ],
@@ -18722,23 +18722,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "DATE()只截取日期不截取月份，应改为DATE_FORMAT(login_time,'%Y-%m')",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "GROUP BY顺序错误",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "COUNT DISTINCT不正确",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "别名month导致冲突",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "DATE()只截取日期不截取月份，应改为DATE_FORMAT(login_time,'%Y-%m')",
+        "correct": true
       }
     ],
     "explanation": "DATE()返回完整日期而非月份，月活需用DATE_FORMAT截取年月。B顺序不影响。C与分组无关。D别名不影响分组逻辑。",
@@ -18790,22 +18790,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "SELECT COUNT(*) as yoy_growth FROM daily_dau",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "SELECT a.dt, ROUND((a.dau-b.dau)*100.0/NULLIF(b.dau,0),2) as yoy_growth FROM daily_dau a JOIN daily_dau_last_year b ON DATE_FORMAT(a.dt,'%m-%d')=DATE_FORMAT(b.dt,'%m-%d')",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "SELECT dt, dau*1.0/LAG(dau,365) OVER() as yoy_growth FROM daily_dau",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "SELECT dt, dau-dau as yoy_growth FROM daily_dau",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "SELECT COUNT(*) as yoy_growth FROM daily_dau",
+        "text": "SELECT dt, dau-dau as yoy_growth FROM daily_dau",
         "correct": false
       }
     ],
@@ -18824,22 +18824,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT COUNT(DISTINCT a.user_id) as path_users FROM (SELECT user_id FROM user_action WHERE action='homepage') a INNER JOIN (SELECT user_id FROM user_action WHERE action='order') b ON a.user_id=b.user_id",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT COUNT(*) FROM user_action WHERE action IN ('homepage','order')",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT user_id FROM user_action WHERE action='homepage' AND action='order'",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT DISTINCT user_id FROM user_action WHERE action='order'",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT COUNT(DISTINCT a.user_id) as path_users FROM (SELECT user_id FROM user_action WHERE action='homepage') a INNER JOIN (SELECT user_id FROM user_action WHERE action='order') b ON a.user_id=b.user_id",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT COUNT(*) FROM user_action WHERE action IN ('homepage','order')",
         "correct": false
       }
     ],
@@ -18858,23 +18858,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "GROUP BY已经去重，HAVING没有问题，重复可能是数据问题",
+        "text": "SUM函数使用错误",
         "correct": false
       },
       {
         "label": "B",
-        "text": "HAVING条件错误",
+        "text": "GROUP BY已经去重，HAVING没有问题，重复可能是数据问题",
         "correct": false
       },
       {
         "label": "C",
-        "text": "GROUP BY user_id不会产生重复，题目描述的'重复'可能是误解或数据中user_id实际有NULL值导致分组异常",
-        "correct": true
+        "text": "HAVING条件错误",
+        "correct": false
       },
       {
         "label": "D",
-        "text": "SUM函数使用错误",
-        "correct": false
+        "text": "GROUP BY user_id不会产生重复，题目描述的'重复'可能是误解或数据中user_id实际有NULL值导致分组异常",
+        "correct": true
       }
     ],
     "explanation": "GROUP BY user_id本身不会产生重复。HAVING和SUM用法正确。题目说'重复'可能是NULL值分组导致的异常显示。B和D语法正确。A说数据问题但更可能是理解偏差。",
@@ -18960,22 +18960,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT user_id, DATEDIFF(CURDATE(), MAX(order_date)) as recency FROM orders GROUP BY user_id",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT user_id, DATEDIFF(CURDATE(), order_date) as recency FROM orders",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT user_id, MAX(order_date) as recency FROM orders GROUP BY user_id",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT user_id, MIN(DATEDIFF(CURDATE(), order_date)) as recency FROM orders GROUP BY user_id",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT user_id, DATEDIFF(CURDATE(), MAX(order_date)) as recency FROM orders GROUP BY user_id",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT user_id, DATEDIFF(CURDATE(), order_date) as recency FROM orders",
         "correct": false
       }
     ],
@@ -18994,23 +18994,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT中用了DATE(login_time)但GROUP BY用了WEEKDAY，应统一用YEARWEEK或DATE_FORMAT截取周",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "COUNT DISTINCT不正确",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "WEEKDAY函数返回值不对",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "表数据不足",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "SELECT中用了DATE(login_time)但GROUP BY用了WEEKDAY，应统一用YEARWEEK或DATE_FORMAT截取周",
+        "correct": true
       }
     ],
     "explanation": "SELECT和GROUP BY的分组依据不一致导致结果异常。应统一用YEARWEEK分组。B与分组无关。C的WEEKDAY语法正确。D不是根本原因。",
@@ -19062,22 +19062,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "SELECT user_id, MAX(order_date) as frequency FROM orders GROUP BY user_id",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "SELECT user_id, COUNT(DISTINCT order_date) as frequency FROM orders GROUP BY user_id",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "SELECT user_id, COUNT(*) as frequency FROM orders GROUP BY user_id",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "SELECT user_id, SUM(order_date) as frequency FROM orders GROUP BY user_id",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "SELECT user_id, MAX(order_date) as frequency FROM orders GROUP BY user_id",
+        "text": "SELECT user_id, SUM(order_date) as frequency FROM orders GROUP BY user_id",
         "correct": false
       }
     ],
@@ -19096,22 +19096,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT AVG(amount) as median FROM (SELECT amount, ROW_NUMBER() OVER(ORDER BY amount) as rn, COUNT(*) OVER() as total FROM orders) t WHERE rn IN (FLOOR((total+1)/2), CEIL((total+1)/2))",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT MEDIAN(amount) FROM orders",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT PERCENTILE(amount,50) FROM orders",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT amount FROM orders ORDER BY amount LIMIT 1 OFFSET (SELECT COUNT(*)/2 FROM orders)",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT AVG(amount) as median FROM (SELECT amount, ROW_NUMBER() OVER(ORDER BY amount) as rn, COUNT(*) OVER() as total FROM orders) t WHERE rn IN (FLOOR((total+1)/2), CEIL((total+1)/2))",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT MEDIAN(amount) FROM orders",
         "correct": false
       }
     ],
@@ -19130,23 +19130,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT 'register' as step, COUNT(DISTINCT user_id) as cnt FROM user_register UNION ALL SELECT 'activate' as step, COUNT(DISTINCT user_id) as cnt FROM user_activate UNION ALL SELECT 'pay' as step, COUNT(DISTINCT user_id) as cnt FROM user_payment",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "SELECT COUNT(*) FROM user_register a JOIN user_activate b JOIN user_payment c",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "SELECT step, COUNT(*) FROM funnel_data GROUP BY step",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "SELECT user_id FROM user_register WHERE user_id IN (SELECT user_id FROM user_activate) AND user_id IN (SELECT user_id FROM user_payment)",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "SELECT 'register' as step, COUNT(DISTINCT user_id) as cnt FROM user_register UNION ALL SELECT 'activate' as step, COUNT(DISTINCT user_id) as cnt FROM user_activate UNION ALL SELECT 'pay' as step, COUNT(DISTINCT user_id) as cnt FROM user_payment",
+        "correct": true
       }
     ],
     "explanation": "三级漏斗需分别统计每级人数用UNION ALL合并。B的三表JOIN只返回同时满足三级的人数。C假设有现成表。D只返回完成全漏斗的用户。",
@@ -19164,22 +19164,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT user_id FROM (SELECT user_id, purchase_seq, ROW_NUMBER() OVER(PARTITION BY user_id ORDER BY purchase_date) as rn FROM purchases) a GROUP BY user_id HAVING MIN(purchase_seq - rn) IS NOT NULL AND COUNT(CASE WHEN purchase_seq - rn = 0 THEN 1 END) >= 3",
-        "correct": false
-      },
-      {
-        "label": "B",
-        "text": "SELECT user_id FROM (SELECT user_id, purchase_date, ROW_NUMBER() OVER(PARTITION BY user_id ORDER BY purchase_date) as rn FROM purchases) a WHERE rn <= 3",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT a.user_id FROM purchases a INNER JOIN purchases b ON a.user_id=b.user_id AND b.purchase_date > a.purchase_date INNER JOIN purchases c ON b.user_id=c.user_id AND c.purchase_date > b.purchase_date WHERE DATEDIFF(b.purchase_date,a.purchase_date)<=1 AND DATEDIFF(c.purchase_date,b.purchase_date)<=1",
         "correct": true
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT user_id, COUNT(*) FROM purchases GROUP BY user_id HAVING COUNT(*)>=3",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT user_id FROM (SELECT user_id, purchase_seq, ROW_NUMBER() OVER(PARTITION BY user_id ORDER BY purchase_date) as rn FROM purchases) a GROUP BY user_id HAVING MIN(purchase_seq - rn) IS NOT NULL AND COUNT(CASE WHEN purchase_seq - rn = 0 THEN 1 END) >= 3",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "SELECT user_id FROM (SELECT user_id, purchase_date, ROW_NUMBER() OVER(PARTITION BY user_id ORDER BY purchase_date) as rn FROM purchases) a WHERE rn <= 3",
         "correct": false
       }
     ],
@@ -19198,22 +19198,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "SELECT COUNT(*) as z_score FROM ab_test WHERE group_id='A'",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "SELECT (p1-p2)/SQRT(p1*(1-p1)/n1+p2*(1-p2)/n2) as z_score FROM (SELECT SUM(is_conv)*1.0/COUNT(*) as p1, COUNT(*) as n1 FROM ab_test WHERE group_id='A') a, (SELECT SUM(is_conv)*1.0/COUNT(*) as p2, COUNT(*) as n2 FROM ab_test WHERE group_id='B') b",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "SELECT AVG(is_conv) as z_score FROM ab_test GROUP BY group_id",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "SELECT (p1-p2) as z_score FROM ab_test WHERE group_id IN ('A','B')",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "SELECT COUNT(*) as z_score FROM ab_test WHERE group_id='A'",
+        "text": "SELECT (p1-p2) as z_score FROM ab_test WHERE group_id IN ('A','B')",
         "correct": false
       }
     ],
@@ -19266,23 +19266,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "将COUNT(DISTINCT a.user_id)改为NULLIF(COUNT(DISTINCT a.user_id),0)",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "去掉LEFT JOIN改用INNER JOIN",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "用HAVING COUNT(DISTINCT a.user_id)>0替代GROUP BY",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "改用AVG函数替代除法",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "将COUNT(DISTINCT a.user_id)改为NULLIF(COUNT(DISTINCT a.user_id),0)",
+        "correct": true
       }
     ],
     "explanation": "NULLIF将0转为NULL避免除零。B改变JOIN类型不能解决除零。C的HAVING不能替代GROUP BY。D用AVG逻辑不同。",
@@ -19334,22 +19334,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "SELECT COUNT(*) FROM user_action GROUP BY user_id HAVING COUNT(*)>=3",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "SELECT a.user_id FROM (SELECT user_id FROM user_action WHERE action='homepage') a INNER JOIN (SELECT user_id FROM user_action WHERE action='search') b ON a.user_id=b.user_id INNER JOIN (SELECT user_id FROM user_action WHERE action='order') c ON a.user_id=c.user_id",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "SELECT user_id FROM user_action WHERE action='homepage' AND action='search' AND action='order'",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "SELECT user_id FROM user_action WHERE action IN ('homepage','search','order')",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "SELECT COUNT(*) FROM user_action GROUP BY user_id HAVING COUNT(*)>=3",
+        "text": "SELECT user_id FROM user_action WHERE action IN ('homepage','search','order')",
         "correct": false
       }
     ],
@@ -19368,22 +19368,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT dt, ROUND((dau-LAG(dau) OVER(ORDER BY dt))*100.0/LAG(dau) OVER(ORDER BY dt),2) as growth FROM daily_dau",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT dt, (dau-LEAD(dau) OVER(ORDER BY dt))/dau as growth FROM daily_dau",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT dt, dau/LAG(dau) OVER() as growth FROM daily_dau",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT dt, (dau-dau) as growth FROM daily_dau",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT dt, ROUND((dau-LAG(dau) OVER(ORDER BY dt))*100.0/LAG(dau) OVER(ORDER BY dt),2) as growth FROM daily_dau",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT dt, (dau-LEAD(dau) OVER(ORDER BY dt))/dau as growth FROM daily_dau",
         "correct": false
       }
     ],
@@ -19402,23 +19402,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT user_id, NTILE(5) OVER(ORDER BY DATEDIFF(CURDATE(),MAX(order_date)) DESC) as r_score FROM orders GROUP BY user_id",
-        "correct": false
-      },
-      {
-        "label": "B",
-        "text": "SELECT user_id, NTILE(5) OVER(ORDER BY DATEDIFF(CURDATE(),last_order_date)) as r_score FROM (SELECT user_id, MAX(order_date) as last_order_date FROM orders GROUP BY user_id) t",
-        "correct": true
-      },
-      {
-        "label": "C",
         "text": "SELECT user_id, CASE WHEN recency<7 THEN 5 WHEN recency<14 THEN 4 ELSE 1 END as r_score FROM orders",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT user_id, ROW_NUMBER() OVER(ORDER BY DATEDIFF(CURDATE(),order_date)) as r_score FROM orders",
         "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT user_id, NTILE(5) OVER(ORDER BY DATEDIFF(CURDATE(),MAX(order_date)) DESC) as r_score FROM orders GROUP BY user_id",
+        "correct": false
+      },
+      {
+        "label": "D",
+        "text": "SELECT user_id, NTILE(5) OVER(ORDER BY DATEDIFF(CURDATE(),last_order_date)) as r_score FROM (SELECT user_id, MAX(order_date) as last_order_date FROM orders GROUP BY user_id) t",
+        "correct": true
       }
     ],
     "explanation": "R分用NTILE(5)按最近购买距今天数分5组。A的NTILE在GROUP BY后不能直接使用。C没有GROUP BY且recency字段可能不存在。D用ROW_NUMBER不是分桶。",
@@ -19470,22 +19470,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "SELECT order_id, amount FROM orders GROUP BY order_id HAVING amount > AVG(amount)",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "SELECT order_id, amount FROM orders WHERE amount > (SELECT AVG(amount)+3*STDDEV(amount) FROM orders)",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "SELECT order_id, amount FROM orders WHERE amount > MAX(amount)",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "SELECT order_id FROM orders WHERE amount > 10000",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "SELECT order_id, amount FROM orders GROUP BY order_id HAVING amount > AVG(amount)",
+        "text": "SELECT order_id FROM orders WHERE amount > 10000",
         "correct": false
       }
     ],
@@ -19504,22 +19504,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT user_id FROM (SELECT user_id, DATE(login_time) as dt, DATE_SUB(DATE(login_time), INTERVAL ROW_NUMBER() OVER(PARTITION BY user_id ORDER BY DATE(login_time)) DAY) as grp FROM user_login) a GROUP BY user_id, grp HAVING COUNT(*)>=3",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT user_id FROM user_login GROUP BY user_id HAVING COUNT(DISTINCT DATE(login_time))>=3",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT user_id FROM user_login WHERE ROW_NUMBER() OVER(ORDER BY login_time)<=3",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT DISTINCT user_id FROM user_login WHERE COUNT(*)>=3",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT user_id FROM (SELECT user_id, DATE(login_time) as dt, DATE_SUB(DATE(login_time), INTERVAL ROW_NUMBER() OVER(PARTITION BY user_id ORDER BY DATE(login_time)) DAY) as grp FROM user_login) a GROUP BY user_id, grp HAVING COUNT(*)>=3",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT user_id FROM user_login GROUP BY user_id HAVING COUNT(DISTINCT DATE(login_time))>=3",
         "correct": false
       }
     ],
@@ -19538,23 +19538,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT a.month, ROUND((a.revenue-b.revenue)*100.0/NULLIF(b.revenue,0),2) as yoy FROM monthly_revenue a JOIN monthly_revenue_last_year b ON a.month=b.month",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "SELECT month, revenue/LAG(revenue,12) OVER() as yoy FROM monthly_revenue",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "SELECT month, revenue-revenue as yoy FROM monthly_revenue",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "SELECT month, AVG(revenue) as yoy FROM monthly_revenue GROUP BY month",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "SELECT a.month, ROUND((a.revenue-b.revenue)*100.0/NULLIF(b.revenue,0),2) as yoy FROM monthly_revenue a JOIN monthly_revenue_last_year b ON a.month=b.month",
+        "correct": true
       }
     ],
     "explanation": "同比增长需对比去年同期，JOIN关联同月数据。B的LAG偏移12个月不精确。C计算错误。D返回平均值非增长率。",
@@ -19606,22 +19606,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "SELECT a.dt, AVG(COUNT(DISTINCT b.user_id)) as retention_30d FROM user_first_login a LEFT JOIN user_login b ON a.user_id=b.user_id GROUP BY a.dt",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "SELECT a.dt, COUNT(DISTINCT b.user_id)*100.0/COUNT(DISTINCT a.user_id) as retention_30d FROM (SELECT DATE(first_login) as dt, user_id FROM user_first_login) a LEFT JOIN (SELECT user_id, DATE(login_time) as login_dt FROM user_login) b ON a.user_id=b.user_id AND DATEDIFF(b.login_dt,a.dt)=29 GROUP BY a.dt",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "SELECT dt, COUNT(DISTINCT user_id)*100.0/7 as retention_30d FROM user_login GROUP BY dt",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "SELECT COUNT(DISTINCT user_id) as retention_30d FROM user_login WHERE DATEDIFF(CURDATE(),login_time)<=30",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "SELECT a.dt, AVG(COUNT(DISTINCT b.user_id)) as retention_30d FROM user_first_login a LEFT JOIN user_login b ON a.user_id=b.user_id GROUP BY a.dt",
+        "text": "SELECT COUNT(DISTINCT user_id) as retention_30d FROM user_login WHERE DATEDIFF(CURDATE(),login_time)<=30",
         "correct": false
       }
     ],
@@ -19640,22 +19640,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT user_id, NTILE(5) OVER(ORDER BY r_score) as r, NTILE(5) OVER(ORDER BY f_score) as f, NTILE(5) OVER(ORDER BY m_score) as m FROM (SELECT user_id, DATEDIFF(CURDATE(),MAX(order_date)) as r_score, COUNT(DISTINCT order_date) as f_score, SUM(amount) as m_score FROM orders GROUP BY user_id) t",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT user_id, r+f+m as total FROM rfm_scores",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT user_id, AVG(r_score)+AVG(f_score)+AVG(m_score) as total FROM orders GROUP BY user_id",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT user_id, r_score*f_score*m_score as total FROM orders",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT user_id, NTILE(5) OVER(ORDER BY r_score) as r, NTILE(5) OVER(ORDER BY f_score) as f, NTILE(5) OVER(ORDER BY m_score) as m FROM (SELECT user_id, DATEDIFF(CURDATE(),MAX(order_date)) as r_score, COUNT(DISTINCT order_date) as f_score, SUM(amount) as m_score FROM orders GROUP BY user_id) t",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT user_id, r+f+m as total FROM rfm_scores",
         "correct": false
       }
     ],
@@ -19674,23 +19674,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT a.group_id, COUNT(DISTINCT a.user_id) as dau, AVG(CASE WHEN b.is_retained=1 THEN 1 ELSE 0 END) as retention, AVG(a.revenue) as arpu FROM ab_test a LEFT JOIN ab_retention b ON a.user_id=b.user_id GROUP BY a.group_id",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "SELECT group_id, COUNT(*), SUM(revenue) FROM ab_test GROUP BY group_id",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "SELECT group_id, MAX(dau), MAX(retention), MAX(arpu) FROM ab_summary GROUP BY group_id",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "SELECT group_id, dau, retention, arpu FROM ab_test WHERE group_id IN ('A','B')",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "SELECT a.group_id, COUNT(DISTINCT a.user_id) as dau, AVG(CASE WHEN b.is_retained=1 THEN 1 ELSE 0 END) as retention, AVG(a.revenue) as arpu FROM ab_test a LEFT JOIN ab_retention b ON a.user_id=b.user_id GROUP BY a.group_id",
+        "correct": true
       }
     ],
     "explanation": "多指标AB分析需JOIN多源数据并按组聚合。B缺少留存指标。C假设有汇总表。D直接SELECT字段不聚合。",
@@ -19742,22 +19742,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "SELECT action, COUNT(DISTINCT user_id) FROM user_action GROUP BY action",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "SELECT 'search_to_cart' as step, COUNT(DISTINCT a.user_id)*100.0/(SELECT COUNT(DISTINCT user_id) FROM user_action WHERE action='search') as cvr FROM user_action a INNER JOIN user_action b ON a.user_id=b.user_id AND b.action='cart' WHERE a.action='search'",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "SELECT COUNT(*) FROM user_action WHERE action IN ('search','cart','order')",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "SELECT user_id FROM user_action WHERE action='search' AND action='cart' AND action='order'",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "SELECT action, COUNT(DISTINCT user_id) FROM user_action GROUP BY action",
+        "text": "SELECT user_id FROM user_action WHERE action='search' AND action='cart' AND action='order'",
         "correct": false
       }
     ],
@@ -19776,22 +19776,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT user_id FROM (SELECT user_id, DATE(login_time) as dt, DATE_SUB(DATE(login_time), INTERVAL ROW_NUMBER() OVER(PARTITION BY user_id ORDER BY DATE(login_time)) DAY) as grp FROM user_login) a GROUP BY user_id, grp HAVING COUNT(*)>=5",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "SELECT user_id FROM user_login GROUP BY user_id HAVING COUNT(DISTINCT DATE(login_time))>=5",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "SELECT user_id FROM user_login WHERE ROW_NUMBER() OVER(ORDER BY login_time)<=5",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "SELECT user_id FROM (SELECT user_id, LAG(DATE(login_time)) OVER(PARTITION BY user_id ORDER BY DATE(login_time)) as prev_dt FROM user_login) a WHERE DATEDIFF(dt,prev_dt)=1 GROUP BY user_id HAVING COUNT(*)>=5",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "SELECT user_id FROM (SELECT user_id, DATE(login_time) as dt, DATE_SUB(DATE(login_time), INTERVAL ROW_NUMBER() OVER(PARTITION BY user_id ORDER BY DATE(login_time)) DAY) as grp FROM user_login) a GROUP BY user_id, grp HAVING COUNT(*)>=5",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "SELECT user_id FROM user_login GROUP BY user_id HAVING COUNT(DISTINCT DATE(login_time))>=5",
         "correct": false
       }
     ],
@@ -19810,23 +19810,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "a.dt是登录日期字段非首次登录日期，次日登录用户应通过首次登录表判断基准日",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "LEFT JOIN条件错误",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "COUNT DISTINCT计算错误",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "DATE_ADD函数不正确",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "a.dt是登录日期字段非首次登录日期，次日登录用户应通过首次登录表判断基准日",
+        "correct": true
       }
     ],
     "explanation": "a.dt来自登录表的日期，但留存率的基准日应是首次登录日，非任意登录日。LEFT JOIN、COUNT DISTINCT、DATE_ADD用法均正确。",
@@ -19878,22 +19878,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "GROUP BY缺失",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "整数除法导致结果为0，应用dau*1.0/LAG(dau)或将分子分母转为DECIMAL",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "LAG函数使用错误",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "OVER子句缺少PARTITION BY",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "GROUP BY缺失",
+        "text": "OVER子句缺少PARTITION BY",
         "correct": false
       }
     ],
@@ -19912,22 +19912,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "TIMESTAMPDIFF计算正确但可能存在多个order匹配导致用户被重复计数，且未排除search本身的重复记录",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "TIMESTAMPDIFF函数不正确",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "EXISTS语法错误",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "WHERE条件不够严格",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "TIMESTAMPDIFF计算正确但可能存在多个order匹配导致用户被重复计数，且未排除search本身的重复记录",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "TIMESTAMPDIFF函数不正确",
         "correct": false
       }
     ],
@@ -19946,23 +19946,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "SELECT DATE_FORMAT(login_time,'%Y-%m') as month, COUNT(DISTINCT user_id) as mau FROM user_login GROUP BY DATE_FORMAT(login_time,'%Y-%m')",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "SELECT MONTH(login_time) as month, COUNT(user_id) FROM user_login GROUP BY MONTH(login_time)",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "SELECT COUNT(DISTINCT user_id) FROM user_login WHERE login_time >= DATE_SUB(NOW(),INTERVAL 30 DAY)",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "SELECT DATE(login_time), COUNT(*) FROM user_login GROUP BY DATE(login_time)",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "SELECT DATE_FORMAT(login_time,'%Y-%m') as month, COUNT(DISTINCT user_id) as mau FROM user_login GROUP BY DATE_FORMAT(login_time,'%Y-%m')",
+        "correct": true
       }
     ],
     "explanation": "MAU按月分组用DATE_FORMAT，COUNT DISTINCT去重。B没有DISTINCT且MONTH只取月份数字会跨年混淆。C是近30天而非自然月。D按天分组不是按月。",
@@ -20012,22 +20012,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
+        "text": "次日留存率 = 连续两天都登录的用户数 / 总用户数",
+        "correct": false
+      },
+      {
+        "label": "B",
         "text": "次日留存率 = 第2天再次登录的用户数 / 第1天新注册用户数",
         "correct": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "次日留存率 = 第2天登录用户数 / 第2天总用户数",
         "correct": false
       },
       {
-        "label": "C",
-        "text": "次日留存率 = 第2天新注册用户数 / 第1天新注册用户数",
-        "correct": false
-      },
-      {
         "label": "D",
-        "text": "次日留存率 = 连续两天都登录的用户数 / 总用户数",
+        "text": "次日留存率 = 第2天新注册用户数 / 第1天新注册用户数",
         "correct": false
       }
     ],
@@ -20046,22 +20046,22 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "ROW_NUMBER",
-        "correct": true
-      },
-      {
-        "label": "B",
-        "text": "RANK",
-        "correct": false
-      },
-      {
-        "label": "C",
         "text": "DENSE_RANK",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "COUNT",
+        "correct": false
+      },
+      {
+        "label": "C",
+        "text": "ROW_NUMBER",
+        "correct": true
+      },
+      {
+        "label": "D",
+        "text": "RANK",
         "correct": false
       }
     ],
@@ -20080,23 +20080,23 @@ const QUESTIONS = [
     "options": [
       {
         "label": "A",
-        "text": "25%",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "20%",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "80%",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "125%",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "25%",
+        "correct": true
       }
     ],
     "explanation": "同比增长率 = (本期-同期)/同期 x 100% = (100-80)/80 x 100% = 25%。B是80/100-1算反了。C是80/100。D是100/80。",

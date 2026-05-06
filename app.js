@@ -759,17 +759,66 @@ function renderWrongBook() {
     if (!q) return ''
     return `
       <div class="card wrong-item">
-        <div class="wrong-content" onclick="startPractice('${w.questionId}')">
+        <div class="wrong-content" onclick="startWrongRedo('${w.questionId}')">
           <div class="wrong-meta">${diffTag(q.difficulty)}</div>
           <div class="wrong-stem">${formatContent(q.stem)}</div>
         </div>
         <div class="wrong-actions">
-          <span class="action-redo" onclick="startPractice('${w.questionId}')">重做</span>
+          <span class="action-redo" onclick="startWrongRedo('${w.questionId}')">重做</span>
           <span class="action-remove" onclick="removeWrongAndRefresh('${w.questionId}')">移除</span>
         </div>
       </div>
     `
   }).join('')
+
+  if (wrongBook.length > 1) {
+    listEl.innerHTML += `
+      <div class="next-btn" style="margin-top:16px" onclick="startWrongRedoAll()">重做全部错题 (${wrongBook.length}题)</div>
+    `
+  }
+}
+
+function startWrongRedo(questionId) {
+  const wrongBook = getWrongBook().filter(w => !w.reviewed)
+  const wrongQuestions = wrongBook.map(w =>
+    QUESTIONS[w.questionId] || QUESTIONS.find((q, i) => (q.id || i) === w.questionId)
+  ).filter(Boolean)
+
+  if (wrongQuestions.length === 0) return
+
+  const startQ = QUESTIONS[questionId] || QUESTIONS.find((q, i) => (q.id || i) === parseInt(questionId))
+  practiceQuestions = shuffleArray(wrongQuestions)
+  if (startQ) {
+    const targetIdx = practiceQuestions.indexOf(startQ)
+    if (targetIdx > 0) {
+      [practiceQuestions[0], practiceQuestions[targetIdx]] = [practiceQuestions[targetIdx], practiceQuestions[0]]
+    }
+  }
+  practiceIndex = 0
+  practiceSelected = null
+  practiceShowResult = false
+  practiceSessionAnswers = []
+
+  renderPractice()
+  showPage('practice')
+}
+
+function startWrongRedoAll() {
+  const wrongBook = getWrongBook().filter(w => !w.reviewed)
+  const wrongQuestions = wrongBook.map(w =>
+    QUESTIONS[w.questionId] || QUESTIONS.find((q, i) => (q.id || i) === w.questionId)
+  ).filter(Boolean)
+
+  if (wrongQuestions.length === 0) return
+
+  practiceQuestions = shuffleArray(wrongQuestions)
+  practiceIndex = 0
+  practiceSelected = null
+  practiceShowResult = false
+  practiceSessionAnswers = []
+
+  renderPractice()
+  showPage('practice')
 }
 
 function removeWrongAndRefresh(questionId) {
